@@ -36,6 +36,8 @@ public class Bean : MonoBehaviour, ICorruptible
 
     public void Start()
     {
+        BeanManager.Instance.AddBean(this);
+        
         if (IsSour)
             BeanManager.Instance.AddSourBean(this);
         else BeanManager.Instance.AddSweetBean(this);
@@ -46,6 +48,8 @@ public class Bean : MonoBehaviour, ICorruptible
 
     public void OnDestroy()
     {
+        BeanManager.Instance.RemoveBean(this);
+        
         if (IsSour)
             BeanManager.Instance.RemoveSourBean(this);
         else BeanManager.Instance.RemoveSweetBean(this);

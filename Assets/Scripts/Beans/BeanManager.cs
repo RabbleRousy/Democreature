@@ -28,6 +28,8 @@ public class BeanManager : MonoBehaviour
         return (float)sourBeans.Count / (sweetBeans.Count + sourBeans.Count);
     }
 
+    public void AddBean(Bean bean) => allBeans.Add(bean);
+    public void RemoveBean(Bean bean) => allBeans.Remove(bean);
     public void AddSweetBean(Bean bean) => sweetBeans.Add(bean);
     public void RemoveSweetBean(Bean bean) => sweetBeans.Remove(bean);
     public void AddSourBean(Bean bean) => sourBeans.Add(bean);
@@ -58,7 +60,7 @@ public class BeanManager : MonoBehaviour
         }
         else
         {
-            bean = sourBeans.FirstOrDefault(bean => !policeBeans.Contains(bean));
+            bean = sweetBeans.FirstOrDefault(bean => !policeBeans.Contains(bean));
         }
 
         if (bean == null)
