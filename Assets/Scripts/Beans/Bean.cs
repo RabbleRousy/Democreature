@@ -26,16 +26,18 @@ public class Bean : MonoBehaviour, ICorruptible
  
     private void Awake()
     {
-        OnBecomeSour += BeanManager.Instance.SourToSweet;
-        OnBecomeSweet += BeanManager.Instance.SweetToSour;
+        OnBecomeSour += BeanManager.Instance.SweetToSour;
+        OnBecomeSweet += BeanManager.Instance.SourToSweet;
         OnBecomePolice += BeanManager.Instance.AddPolice;
         OnUnPolice += BeanManager.Instance.RemovePolice;
 
-        GameManager.Instance.OnTick += ReduceLifeTime;
+        GameManager.Instance.OnLateTick += ReduceLifeTime;
         
         renderer = GetComponentInChildren<SpriteRenderer>();
         // Pick random animator
         GetComponent<Animator>().runtimeAnimatorController = possibleAnimators[Random.Range(0, possibleAnimators.Length)];
+        
+        AddToLists();
     }
 
     private void ReduceLifeTime()
@@ -43,11 +45,12 @@ public class Bean : MonoBehaviour, ICorruptible
         lifeTime--;
         if (lifeTime == 0)
         {
+            RemoveFromLists();
             Destroy(gameObject);
         }
     }
 
-    public void Start()
+    public void AddToLists()
     {
         BeanManager.Instance.AddBean(this);
         
@@ -59,7 +62,7 @@ public class Bean : MonoBehaviour, ICorruptible
             BeanManager.Instance.AddPolice(this);
     }
 
-    public void OnDestroy()
+    public void RemoveFromLists()
     {
         BeanManager.Instance.RemoveBean(this);
         
@@ -71,6 +74,9 @@ public class Bean : MonoBehaviour, ICorruptible
             BeanManager.Instance.RemovePolice(this);
     }
 
+    [ContextMenu("Corrupt")]
+    public void Corrupt() => Corrupt(1f);
+    
     public void Corrupt(float value)
     {
         bool wasSour = IsSour;
