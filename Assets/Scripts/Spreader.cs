@@ -25,9 +25,14 @@ namespace DefaultNamespace
         public bool UseCorruptionChance { get; set; }
 
 
-        private void Start()
+        private void OnEnable()
         {
             GameManager.Instance.OnTick += Spread;
+        }
+
+        private void OnDisable()
+        {
+            GameManager.Instance.OnTick -= Spread;
         }
 
         private void Spread()

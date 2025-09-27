@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using DefaultNamespace;
+using DefaultNamespace.Organs;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
@@ -10,10 +12,14 @@ public class BeanMovement : MonoBehaviour
     private List<AreaManager> possibleTargets, usedTargets;
     private Vector3 currentTarget;
     private NavMeshAgent agent;
+    
+    public bool Patrolling { get; private set; }
+    private PatrolTarget patrolTarget;
 
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        Patrolling = false;
     }
 
     public void InitializeTargets(List<AreaManager> possibleTargets)
@@ -21,6 +27,7 @@ public class BeanMovement : MonoBehaviour
         this.possibleTargets = possibleTargets;
         usedTargets = new List<AreaManager>();
         FindNewTarget();
+        agent.SetDestination(currentTarget);
     }
 
     // Update is called once per frame
@@ -28,7 +35,15 @@ public class BeanMovement : MonoBehaviour
     {
         if (Vector3.Distance(transform.position, currentTarget) < 1f)
         {
-            FindNewTarget();
+            if (Patrolling)
+            {
+                patrolTarget = patrolTarget.Next;
+                currentTarget = patrolTarget.transform.position;
+            }
+            else
+                FindNewTarget();
+            
+            agent.SetDestination(currentTarget);
         }
     }
 
@@ -50,6 +65,24 @@ public class BeanMovement : MonoBehaviour
         possibleTargets.Remove(newTarget);
         usedTargets.Add(newTarget);
         currentTarget = newTarget.GetRandomPoint();
+    }
+
+    public void StartPatrolling(PatrolTarget startTarget)
+    {
+        Patrolling = true;
+        patrolTarget = startTarget;
+        currentTarget = patrolTarget.transform.position;
         agent.SetDestination(currentTarget);
+        ImmuneSystem.Instance.AddPatrollingBean(this);
+        GetComponent<Spreader>().enabled = false;
+    }
+
+    public void StopPatrolling()
+    {
+        Patrolling = false;
+        FindNewTarget();
+        agent.SetDestination(currentTarget);
+        ImmuneSystem.Instance.RemovePatrollingBean(this);
+        GetComponent<Spreader>().enabled = true;
     }
 }

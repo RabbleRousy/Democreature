@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -14,15 +15,43 @@ namespace DefaultNamespace.Organs
         [SerializeField] private int bloodCostPolice;
         [SerializeField] private int bloodCostUpgrade;
 
+        [Header("Patrol Order"), SerializeField]
+        private List<BeanMovement> patrollingBeans;
+        [SerializeField] private int patrolsWanted;
+        [SerializeField] private PatrolTarget patrolStartTarget;
+
 
         private float currentCorruptionChance;
         private int currentUpgrades = 1;
+
+        public static ImmuneSystem Instance { get; private set; }
+
+        private void Awake()
+        {
+            Instance = this;
+        }
         
+        public void AddPatrollingBean(BeanMovement bean) => patrollingBeans.Add(bean);
+        public void RemovePatrollingBean(BeanMovement bean) => patrollingBeans.Remove(bean);
+
 
         private void Update()
         {
             currentCorruptionChance -= decayPerSecond * Time.deltaTime;
             currentCorruptionChance = Mathf.Clamp(currentCorruptionChance, baseCorruptionChance, 1);
+
+            if (patrolsWanted != patrollingBeans.Count)
+                UpdatePatrols();
+        }
+
+        private void UpdatePatrols()
+        {
+            if (patrolsWanted > patrollingBeans.Count)
+            {
+                BeanManager.Instance.IncreasePatrol(patrolStartTarget);
+            }
+            else
+                BeanManager.Instance.DecreasePatrol();
         }
 
         public void Buy()

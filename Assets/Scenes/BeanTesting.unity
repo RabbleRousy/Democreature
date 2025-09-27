@@ -4570,6 +4570,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc4df3f0bdbe4a46a860e64ba8cb061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &2086715284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6463047429201639505, guid: b4643085768ef471b8b5492c7c8deaed, type: 3}
+  m_PrefabInstance: {fileID: 7860191155158662885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcc624b83fa4a4a7d834bab933aa312c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1 &2137314172
 GameObject:
   m_ObjectHideFlags: 0
@@ -4823,6 +4834,10 @@ PrefabInstance:
       propertyPath: policePerUpgrade
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4963803940801557882, guid: 47f1a0618ce1c4b9fa37dc0513993955, type: 3}
+      propertyPath: patrolStartTarget
+      value: 
+      objectReference: {fileID: 2086715284}
     - target: {fileID: 4963803940801557882, guid: 47f1a0618ce1c4b9fa37dc0513993955, type: 3}
       propertyPath: baseCorruptionChance
       value: 1
@@ -5206,30 +5221,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4148752884338043742, guid: b4643085768ef471b8b5492c7c8deaed, type: 3}
-      propertyPath: value
-      value: 0.1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1954955092142865482, guid: b4643085768ef471b8b5492c7c8deaed, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7860191155158662887}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4643085768ef471b8b5492c7c8deaed, type: 3}
---- !u!1 &7860191155158662886 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1954955092142865482, guid: b4643085768ef471b8b5492c7c8deaed, type: 3}
+--- !u!114 &7860191155158662887 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5117945152232956854, guid: b4643085768ef471b8b5492c7c8deaed, type: 3}
   m_PrefabInstance: {fileID: 7860191155158662885}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7860191155158662887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7860191155158662886}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bc4df3f0bdbe4a46a860e64ba8cb061, type: 3}
