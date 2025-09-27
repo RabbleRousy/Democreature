@@ -9,6 +9,10 @@ public class Heart : MonoBehaviour
     [SerializeField] private float maxVirusBias = 0.2f;
     [SerializeField] private int maxPatrollingBeansForProtection;
 
+    [SerializeField] private AnimationCurve clearMindCurve;
+    [SerializeField] private float clearMindInfluence;
+    [SerializeField] private float clearMindCost;
+
     private Spreader spreader;
     private int electionCounter;
 
@@ -43,5 +47,18 @@ public class Heart : MonoBehaviour
         spreader.CorruptionChance = GameManager.Instance.HeartCorruption;
         Debug.Log("Protection: " + protection);
         DotColorizer.Instance.UpdateDots();
+    }
+
+    public void ClearMind()
+    {
+        if (CanClearMind())
+        {
+            GameManager.Instance.BrainCorruption = clearMindCurve.Evaluate(GameManager.Instance.BrainCorruption) * clearMindInfluence;
+        }
+    }
+
+    public bool CanClearMind()
+    {
+        return GameManager.Instance.Blood >= clearMindCost;
     }
 }

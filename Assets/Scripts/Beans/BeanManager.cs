@@ -84,9 +84,10 @@ public class BeanManager : MonoBehaviour
         return false;
     }
 
-    public void TryUnPolice()
+    public void TryUnPolice(bool isCorrupted)
     {
-        Bean[] badBeans = sourBeans.Where(bean => policeBeans.Contains(bean)).ToArray();
+        List<Bean> targetBeans = isCorrupted ? sweetBeans : sourBeans;
+        Bean[] badBeans = sweetBeans.Where(bean => policeBeans.Contains(bean)).ToArray();
         if(badBeans.Length <= 0) return;
         
         badBeans[Random.Range(0, badBeans.Count())].UnPolice();
