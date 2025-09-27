@@ -6997,10 +6997,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 345823087}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.12049612, y: 0.62144226}
-  m_AnchorMax: {x: 0.12049612, y: 0.62144226}
-  m_AnchoredPosition: {x: 93.3, y: -0.9999733}
-  m_SizeDelta: {x: 186.8, y: 69.321}
+  m_AnchorMin: {x: 0.4505039, y: 0.62144226}
+  m_AnchorMax: {x: 0.4505039, y: 0.62144226}
+  m_AnchoredPosition: {x: -59.757034, y: -0.9999733}
+  m_SizeDelta: {x: 120.6859, y: 69.321}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2053418315
 MonoBehaviour:
@@ -7022,7 +7022,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 420
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77b66a2bfa1c8451a9e544f95e90a123, type: 2}
   m_sharedMaterial: {fileID: -3806571054594358934, guid: 77b66a2bfa1c8451a9e544f95e90a123, type: 2}
@@ -7056,7 +7056,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -7563,6 +7563,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4462033462118382606, guid: ad7c2b8252fe64162bf9141df2e738ff, type: 3}
+      propertyPath: bloodCount
+      value: 
+      objectReference: {fileID: 2053418315}
     - target: {fileID: 4462033462118382606, guid: ad7c2b8252fe64162bf9141df2e738ff, type: 3}
       propertyPath: bloodPerBean
       value: 1
