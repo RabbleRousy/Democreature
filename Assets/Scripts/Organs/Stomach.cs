@@ -11,10 +11,10 @@ public class Stomach : MonoBehaviour
     [SerializeField] private Transform[] stationPointsBrain;
     [SerializeField] private Transform[] stationPointsHeart;
     [SerializeField] private Transform[] stationPointsStomach;
-    
+
     [SerializeField] private int maxFactChecker;
-    
-    
+
+
     [SerializeField] private int minFood;
     [SerializeField] private int maxFood;
     [SerializeField] private int minFoodSpawnInterval;
@@ -68,7 +68,7 @@ public class Stomach : MonoBehaviour
         foodSpawnCounter--;
         if (foodSpawnCounter <= 0)
         {
-            foodSpawnCounter = Random.Range(minFoodSpawnInterval, maxFoodSpawnInterval+1);
+            foodSpawnCounter = Random.Range(minFoodSpawnInterval, maxFoodSpawnInterval + 1);
             StartCoroutine(SpawnFood());
         }
     }
@@ -86,7 +86,7 @@ public class Stomach : MonoBehaviour
     {
         CreatStation(ref availablePointsStomach);
     }
-    
+
     public void CreateHeartStation()
     {
         CreatStation(ref availablePointsHeart);
@@ -99,7 +99,7 @@ public class Stomach : MonoBehaviour
 
     private void CreatStation(ref List<Transform> points)
     {
-        if(points.Count <= 0 || GameManager.Instance.Blood < stationCost) return;
+        if (points.Count <= 0 || GameManager.Instance.Blood < stationCost) return;
         int index = Random.Range(0, points.Count);
         Vector3 position = points[index].position;
         points.RemoveAt(index);
@@ -114,24 +114,25 @@ public class Stomach : MonoBehaviour
         int foodAmount = Random.Range(minFood, maxFood + 1);
         availableFoodSpawns = new List<Transform>(foodSpawns);
         float totalInfluence = 0;
+        int bacteriaPerFood = Mathf.Max(1, Mathf.CeilToInt(currentFactChecker / (float)foodAmount)); 
         for (int i = 0; i < foodAmount; i++)
         {
-
             if (availableFoodSpawns.Count <= 0)
             {
                 availableFoodSpawns = new List<Transform>(foodSpawns);
             }
-            
+
             int index = Random.Range(0, availableFoodSpawns.Count);
-            
+
             float currentInfluence = Random.Range(minInfluence, maxInfluence);
             GameObject[] prefabs = currentInfluence < 0 ? foodPrefabsPositive : foodPrefabsNegative;
-            
-            Instantiate(prefabs[Random.Range(0,prefabs.Length)], availableFoodSpawns[index].position, Quaternion.identity);
+
+            Instantiate(prefabs[Random.Range(0, prefabs.Length)], availableFoodSpawns[index].position,
+                Quaternion.identity).GetComponent<FoodVisual>().SetBacteriaAmount(bacteriaPerFood);
             availableFoodSpawns.RemoveAt(index);
 
             totalInfluence += currentInfluence;
-            
+
             yield return new WaitForSeconds(0.5f);
         }
 
@@ -141,7 +142,7 @@ public class Stomach : MonoBehaviour
         {
             totalInfluence *= 1 - (currentFactChecker / (float)maxFactChecker);
         }
-        
+
         UpdateStations(totalInfluence);
     }
 
