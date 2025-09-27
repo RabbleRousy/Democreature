@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,12 +12,23 @@ public class GameManager : MonoBehaviour
     public float BeanCorruption  { get; set; }
     public bool Paused  { get; set; }
 
+    public static GameManager Instance;
+
     public event Action OnTick;
 
     private float timer;
-    private void Start()
+
+    private void Awake()
     {
         timer = tickInterval;
+        if (Instance != null)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
     }
     
     private void Update()
