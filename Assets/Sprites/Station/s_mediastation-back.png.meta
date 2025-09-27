@@ -1,37 +1,13 @@
 fileFormatVersion: 2
-guid: 62a943262cc98e44a87a43dc9cf86897
+guid: 3d7a47703605c514f873871ca558bda3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2739610240120983836
-    second: s_food-good-1-512x512_0
+      213: 1153068524147060102
+    second: s_mediastation-back_0
   - first:
-      213: 3453092942386750772
-    second: s_food-good-1-512x512_1
-  - first:
-      213: -8512348757741865851
-    second: s_food-good-1-512x512_2
-  - first:
-      213: -8387269900292095372
-    second: s_food-good-1-512x512_3
-  - first:
-      213: 5285739356825087847
-    second: s_food-good-1-512x512_4
-  - first:
-      213: 7506520892793590895
-    second: s_food-good-1-512x512_5
-  - first:
-      213: 3018094915944612124
-    second: s_food-good-1-512x512_6
-  - first:
-      213: 7027089532979370893
-    second: s_food-good-1-512x512_7
-  - first:
-      213: 4825335417625505824
-    second: s_food-good-1-512x512_8
-  - first:
-      213: 6000844573285594361
-    second: s_food-good-1-512x512_9
+      213: -1244513144153694434
+    second: s_mediastation-back_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -73,12 +49,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -127,67 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: s_food-good-1-512x512_0
+      name: s_mediastation-back_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
-        width: 512
-        height: 512
+        x: 4
+        y: 29
+        width: 119
+        height: 291
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c111f619ffc050620800000000000000
-      internalID: 2739610240120983836
+      spriteID: 68d2877a6b5800010800000000000000
+      internalID: 1153068524147060102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: s_food-good-1-512x512_1
+      name: s_mediastation-back_1
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 512
+        x: 108
+        y: 28
+        width: 300
+        height: 421
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 435ee5f5cb9dbef20800000000000000
-      internalID: 3453092942386750772
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: s_food-good-1-512x512_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 584fe8ab7ef0ed980800000000000000
-      internalID: -8512348757741865851
+      spriteID: e1f1a6c93e99abee0800000000000000
+      internalID: -1244513144153694434
       vertices: []
       indices: 
       edges: []
@@ -196,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 39e703fa62061394baf0196a143c0e8a
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -204,13 +158,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      s_food-good-1-512x512_0: 2739610240120983836
-      s_food-good-1-512x512_1: 3453092942386750772
-      s_food-good-1-512x512_2: -8512348757741865851
+      s_mediastation-back_0: 1153068524147060102
+      s_mediastation-back_1: -1244513144153694434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

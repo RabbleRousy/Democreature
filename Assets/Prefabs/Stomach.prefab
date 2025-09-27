@@ -1037,8 +1037,16 @@ MonoBehaviour:
   maxFoodSpawnInterval: 5
   minInfluence: -0.5
   maxInfluence: 0.5
-  foodPrefabsPositive: []
-  foodPrefabsNegative: []
+  foodPrefabsPositive:
+  - {fileID: 7397780976240605722, guid: c9f29dde1946b422981c610938a437cd, type: 3}
+  - {fileID: 7397780976240605722, guid: 878606e088cad40c7923d2501a056036, type: 3}
+  - {fileID: 7397780976240605722, guid: 54301d4f8fe9b40ec868571016569ae8, type: 3}
+  - {fileID: 7397780976240605722, guid: 1a069a010d1a842e0ba603dd280bfed6, type: 3}
+  foodPrefabsNegative:
+  - {fileID: 9075401498175362834, guid: 0332e01a094454d6399cb03a1464762f, type: 3}
+  - {fileID: 7397780976240605722, guid: 45846fb005790436987d9b4394f6b973, type: 3}
+  - {fileID: 7397780976240605722, guid: f87b7f1df56b04760bfdf929c5058059, type: 3}
+  - {fileID: 7397780976240605722, guid: b71b789558b9948f8931ed6e6a87bfdd, type: 3}
   foodSpawns:
   - {fileID: 6439152311111903238}
   - {fileID: 2660389330310095683}
