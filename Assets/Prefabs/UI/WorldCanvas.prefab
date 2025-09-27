@@ -504,7 +504,7 @@ GameObject:
   - component: {fileID: 2988312198848006725}
   - component: {fileID: 4885023393538128357}
   m_Layer: 0
-  m_Name: Blood
+  m_Name: RecruitPrice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1250,7 +1250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -10.5045, y: -4.5994}
+  m_AnchoredPosition: {x: -10.504486, y: -4.5993958}
   m_SizeDelta: {x: 38.9126, y: 24.755}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1294822871242955729
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4173412842464675425
 MonoBehaviour:
   m_ObjectHideFlags: 0
