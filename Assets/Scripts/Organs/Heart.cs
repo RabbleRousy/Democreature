@@ -11,10 +11,12 @@ public class Heart : MonoBehaviour
 
     [SerializeField] private AnimationCurve clearMindCurve;
     [SerializeField] private float clearMindInfluence;
-    [SerializeField] private float clearMindCost;
+    [SerializeField] private int clearMindCost;
 
     private Spreader spreader;
     private int electionCounter;
+
+    public int ClearMindCost => clearMindCost;
 
     private void Awake()
     {

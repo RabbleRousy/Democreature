@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: c2208851c0ef879499f0970e28da6835
+guid: 3d7a47703605c514f873871ca558bda3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3238480401385546611
-    second: s_Democreature_Blink_256x256_8fps_0
+      213: 1153068524147060102
+    second: s_mediastation-back_0
   - first:
-      213: -8874802224252509452
-    second: s_Democreature_Blink_256x256_8fps_1
-  - first:
-      213: -7466022626922366831
-    second: s_Democreature_Blink_256x256_8fps_2
-  - first:
-      213: -729299303116690726
-    second: s_Democreature_Blink_256x256_8fps_3
+      213: -1244513144153694434
+    second: s_mediastation-back_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,12 +49,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,106 +99,49 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: VisionOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: s_Democreature_Blink_256x256_8fps_0
+      name: s_mediastation-back_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 256
-        height: 256
+        x: 4
+        y: 29
+        width: 119
+        height: 291
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37366a054c461fc20800000000000000
-      internalID: 3238480401385546611
+      spriteID: 68d2877a6b5800010800000000000000
+      internalID: 1153068524147060102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: s_Democreature_Blink_256x256_8fps_1
+      name: s_mediastation-back_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
+        x: 108
+        y: 28
+        width: 300
+        height: 421
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f22593d56e56d480800000000000000
-      internalID: -8874802224252509452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: s_Democreature_Blink_256x256_8fps_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 198734d3afb536890800000000000000
-      internalID: -7466022626922366831
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: s_Democreature_Blink_256x256_8fps_3
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ada2ac6d52201e5f0800000000000000
-      internalID: -729299303116690726
+      spriteID: e1f1a6c93e99abee0800000000000000
+      internalID: -1244513144153694434
       vertices: []
       indices: 
       edges: []
@@ -213,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 16f71612668694748acb318f98b7dc65
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -221,14 +158,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      s_Democreature_Blink_256x256_8fps_0: 3238480401385546611
-      s_Democreature_Blink_256x256_8fps_1: -8874802224252509452
-      s_Democreature_Blink_256x256_8fps_2: -7466022626922366831
-      s_Democreature_Blink_256x256_8fps_3: -729299303116690726
+      s_mediastation-back_0: 1153068524147060102
+      s_mediastation-back_1: -1244513144153694434
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

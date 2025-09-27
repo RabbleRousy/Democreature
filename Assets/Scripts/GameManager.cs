@@ -1,17 +1,29 @@
 using System;
 using System.Security.Cryptography;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private float tickInterval;
     [SerializeField] private int bloodPerBean = 1;
+    [SerializeField] private TMP_Text bloodCount;
 
     public float BrainCorruption { get; set; }
     public float HeartCorruption  { get; set; }
     public float BeanCorruption  { get; set; }
-    
-    public int Blood  { get; set; }
+
+    private int blood;
+    public int Blood
+    {
+        get => blood;
+        set
+        {
+            blood = value;
+            bloodCount.text = blood.ToString();
+        }
+    }
+
     public bool Paused  { get; set; }
 
     public static GameManager Instance;

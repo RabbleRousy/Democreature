@@ -22,6 +22,15 @@ namespace DefaultNamespace.Organs
         private int currentUpgrades = 1;
 
 
+        public int PoliceCost => bloodCostPolice;
+        public int UpgradeCost => bloodCostUpgrade;
+
+        public int MaxUpgrades => maxUpgrades;
+
+        public int CurrentUpgradeLevel => currentUpgrades;
+
+        public int MaxPolice => currentUpgrades * policePerUpgrade;
+        
         private void Update()
         {
             currentCorruptionChance -= decayPerSecond * Time.deltaTime;
@@ -42,7 +51,7 @@ namespace DefaultNamespace.Organs
 
         public void Buy()
         {
-            if(GameManager.Instance.Blood < bloodCostPolice || BeanManager.Instance.PoliceBeans >= policePerUpgrade * currentUpgrades) return;
+            if(!CanBuyPolice()) return;
             
             bool ShouldBeCorrupted = Random.Range(0f, 1f) <= currentCorruptionChance;
             if (BeanManager.Instance.TryCreatePoliceBean(ShouldBeCorrupted))
@@ -54,11 +63,33 @@ namespace DefaultNamespace.Organs
 
         public void UpgradeLimit()
         {
-            if (GameManager.Instance.Blood >= bloodCostUpgrade && currentUpgrades < maxUpgrades)
+            if (CanBuyUpgrade())
             {
                 currentUpgrades++;
                 GameManager.Instance.Blood -= bloodCostUpgrade;
             }
+        }
+
+        public bool CanBuyPolice()
+        {
+            return GameManager.Instance.Blood >= bloodCostPolice &&
+                   BeanManager.Instance.PoliceBeans < policePerUpgrade * currentUpgrades &&
+                   BeanManager.Instance.PoliceBeans < BeanManager.Instance.AllBeans;
+        }
+
+        public bool CanIncreasePatrol()
+        {
+            return BeanManager.Instance.PoliceBeans > BeanManager.Instance.PatrollingBeans;
+        }
+        
+        public bool CanDecreasePatrol()
+        {
+            return BeanManager.Instance.PatrollingBeans > 0;
+        }
+
+        public bool CanBuyUpgrade()
+        {
+            return GameManager.Instance.Blood >= bloodCostUpgrade && currentUpgrades < maxUpgrades;
         }
     }
 }
