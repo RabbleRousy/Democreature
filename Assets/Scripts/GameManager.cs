@@ -1,16 +1,32 @@
+using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private float tickInterval;
 
-    // Update is called once per frame
-    void Update()
+    public float BrainCorruption { get; set; }
+    public float HeartCorruption  { get; set; }
+    public float ImmuneSystemCorruption  { get; set; }
+    public float BeanCorruption  { get; set; }
+    public bool Paused  { get; set; }
+
+    public event Action OnTick;
+
+    private float timer;
+    private void Start()
     {
-        
+        timer = tickInterval;
+    }
+    
+    private void Update()
+    {
+        timer -= Time.deltaTime;
+
+        if (timer <= 0)
+        {
+            timer = tickInterval;
+            OnTick?.Invoke();
+        }
     }
 }
