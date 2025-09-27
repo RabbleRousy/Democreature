@@ -43,6 +43,11 @@ public class Bean : MonoBehaviour, ICorruptible
         AddToLists();
     }
 
+    private void Start()
+    {
+        UpdateVisuals();
+    }
+
     private void ReduceLifeTime()
     {
         lifeTime--;

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Brain
+  m_Controller: {fileID: 9100000, guid: 69b5fe6480e6f48a2ad9584d1af74c7d, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7524091acbad14910a8e30b8184b5b35, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bde2f6151ba464cba87bd5cd6401306d, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f1c5720e14fb0435ab9a037f66d6d498, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ffbd41195e71f461fb62b1f7d9b312d9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 59036d721b8854a9eb3986c492623941, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9dcda3d6343264397916777bbcd635f5, type: 2}

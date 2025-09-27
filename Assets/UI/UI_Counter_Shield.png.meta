@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 69b7d46dc93c9ec4599eb262ae4aa8a3
+guid: e893c6ac5d1ab1844b0ea8cad3b924be
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3501119669804517972
-    second: s_Democreature_halfdead_0
+      213: -787075717007004749
+    second: UI_Counter_Shield_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: VisionOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: s_Democreature_halfdead_0
+      name: UI_Counter_Shield_0
       rect:
         serializedVersion: 2
-        x: 249
-        y: 27
-        width: 2186
-        height: 1381
+        x: 216
+        y: 21
+        width: 100
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ca53b25c536896fc0800000000000000
-      internalID: -3501119669804517972
+      spriteID: 3bb26743eceb315f0800000000000000
+      internalID: -787075717007004749
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      s_Democreature_halfdead_0: -3501119669804517972
+      UI_Counter_Shield_0: -787075717007004749
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
