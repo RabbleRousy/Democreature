@@ -16,9 +16,12 @@ public class BeanMovement : MonoBehaviour
     public bool Patrolling { get; private set; }
     private PatrolTarget patrolTarget;
 
+    private float defaultStoppingDistance;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
+        defaultStoppingDistance = agent.stoppingDistance;
         Patrolling = false;
     }
 
@@ -33,7 +36,7 @@ public class BeanMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, currentTarget) < 1f)
+        if (agent.remainingDistance <= agent.stoppingDistance)
         {
             if (Patrolling)
             {
@@ -73,8 +76,10 @@ public class BeanMovement : MonoBehaviour
         patrolTarget = startTarget;
         currentTarget = patrolTarget.transform.position;
         agent.SetDestination(currentTarget);
-        ImmuneSystem.Instance.AddPatrollingBean(this);
+        BeanManager.Instance.AddPatrollingBean(this);
         GetComponent<Spreader>().enabled = false;
+        agent.stoppingDistance = 0.5f;
+        agent.avoidancePriority = 90;
     }
 
     public void StopPatrolling()
@@ -82,7 +87,9 @@ public class BeanMovement : MonoBehaviour
         Patrolling = false;
         FindNewTarget();
         agent.SetDestination(currentTarget);
-        ImmuneSystem.Instance.RemovePatrollingBean(this);
+        BeanManager.Instance.RemovePatrollingBean(this);
         GetComponent<Spreader>().enabled = true;
+        agent.stoppingDistance = defaultStoppingDistance;
+        agent.avoidancePriority = 90;
     }
 }
