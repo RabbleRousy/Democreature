@@ -81,7 +81,8 @@ public class BeanManager : MonoBehaviour
     public void TryUnPolice()
     {
         Bean[] badBeans = sourBeans.Where(bean => policeBeans.Contains(bean)).ToArray();
-
+        if(badBeans.Length <= 0) return;
+        
         badBeans[Random.Range(0, badBeans.Count())].UnPolice();
     }
 

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4960177495999341817}
   - component: {fileID: 3457070658375880813}
   - component: {fileID: 6888058224006117134}
+  - component: {fileID: 757191695756536652}
   m_Layer: 0
   m_Name: Brain
   m_TagString: Untagged
@@ -104,6 +105,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc4df3f0bdbe4a46a860e64ba8cb061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &757191695756536652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4062822823775115320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdff4751bf6740389978ebb2767fd509, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.Organs.Brain
+  bloodCost: 10
+  minAmount: 1
+  maxAmount: 5
 --- !u!1 &9219080748522715315
 GameObject:
   m_ObjectHideFlags: 0
