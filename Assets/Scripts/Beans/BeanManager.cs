@@ -56,16 +56,16 @@ public class BeanManager : MonoBehaviour
         Bean bean;
         if (shouldBeSourBean)
         {
-            bean = sourBeans.FirstOrDefault(bean => !policeBeans.Contains(bean));
+            bean = sourBeans.LastOrDefault(bean => !policeBeans.Contains(bean));
         }
         else
         {
-            bean = sweetBeans.FirstOrDefault(bean => !policeBeans.Contains(bean));
+            bean = sweetBeans.LastOrDefault(bean => !policeBeans.Contains(bean));
         }
 
         if (bean == null)
         {
-            bean = allBeans.FirstOrDefault(bean => !policeBeans.Contains(bean));
+            bean = allBeans.LastOrDefault(bean => !policeBeans.Contains(bean));
         }
 
         if (bean != null)

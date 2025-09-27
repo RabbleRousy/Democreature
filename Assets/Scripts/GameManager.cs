@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private float tickInterval;
+    [SerializeField] private int bloodPerBean = 1;
 
     public float BrainCorruption { get; set; }
     public float HeartCorruption  { get; set; }
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
         {
             timer = tickInterval;
             OnTick?.Invoke();
+            Blood += bloodPerBean * BeanManager.Instance.SweetBeans;
         }
     }
 }
