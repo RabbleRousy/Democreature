@@ -22,6 +22,9 @@ public class Stomach : MonoBehaviour
     [SerializeField] private GameObject[] foodPrefabs;
     [SerializeField] private Transform[] foodSpawns;
 
+    [SerializeField] private int factCheckerCost;
+    [SerializeField] private int stationCost;
+
     private List<Transform> availablePointsBrain;
     private List<Transform> availablePointsHeart;
     private List<Transform> availablePointsStomach;
@@ -59,7 +62,11 @@ public class Stomach : MonoBehaviour
 
     public void BuyFactChecker()
     {
-        currentFactChecker++;
+        if (GameManager.Instance.Blood >= factCheckerCost)
+        {
+            currentFactChecker++;
+            GameManager.Instance.Blood -= factCheckerCost;
+        }
     }
 
     public void CreateStomachStation()
@@ -79,13 +86,14 @@ public class Stomach : MonoBehaviour
 
     private void CreatStation(ref List<Transform> points)
     {
-        if(points.Count <= 0) return;
+        if(points.Count <= 0 || GameManager.Instance.Blood < stationCost) return;
         int index = Random.Range(0, points.Count);
         Vector3 position = points[index].position;
         points.RemoveAt(index);
 
         Spreader spreader = Instantiate(stationPrefab, position, Quaternion.identity);
         stations.Add(spreader);
+        GameManager.Instance.Blood -= stationCost;
     }
 
     private IEnumerator SpawnFood()

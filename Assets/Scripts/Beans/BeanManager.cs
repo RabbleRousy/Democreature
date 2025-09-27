@@ -23,7 +23,7 @@ public class BeanManager : MonoBehaviour
         policeBeans = new List<Bean>();
     }
 
-    public float GetParasitePercentage()
+    public float GetSourPercentage()
     {
         return (float)sourBeans.Count / (sweetBeans.Count + sourBeans.Count);
     }
@@ -39,12 +39,14 @@ public class BeanManager : MonoBehaviour
     {
         sweetBeans.Remove(bean);
         sourBeans.Add(bean);
+        GameManager.Instance.BeanCorruption = GetSourPercentage();
     }
 
     public void SourToSweet(Bean bean)
     {
         sourBeans.Remove(bean);
         sweetBeans.Add(bean);
+        GameManager.Instance.BeanCorruption = GetSourPercentage();
     }
 
     public bool TryCreatePoliceBean(bool shouldBeSourBean)

@@ -36,7 +36,7 @@ public class Heart : MonoBehaviour
 
     private void UpdateCorruption()
     {
-        GameManager.Instance.HeartCorruption = BeanManager.Instance.GetParasitePercentage();
+        GameManager.Instance.HeartCorruption = BeanManager.Instance.GetSourPercentage();
         spreader.CorruptionChance = GameManager.Instance.HeartCorruption;
     }
 }
