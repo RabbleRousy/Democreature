@@ -14,7 +14,13 @@ namespace DefaultNamespace
             get => value;
             set => this.value = value;
         }
-        
+
+        public float Range
+        {
+            get => range;
+            set => range = value;
+        }
+
         public float CorruptionChance { get; set; }
         public bool UseCorruptionChance { get; set; }
 
@@ -35,7 +41,6 @@ namespace DefaultNamespace
                    if (UseCorruptionChance)
                    {
                       int direction = Random.Range(0f, 1f) < CorruptionChance ? 1 : -1;
-                      Debug.Log(direction);
                       corruptible.Corrupt(value * direction);
                    }
                    else

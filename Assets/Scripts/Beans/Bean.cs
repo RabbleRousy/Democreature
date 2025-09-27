@@ -9,6 +9,8 @@ public class Bean : MonoBehaviour, ICorruptible
     [SerializeField] private GameObject policeVisuals;
     [SerializeField] private Gradient colorGradient;
     [SerializeField] private float sourThreshold = 0.9f;
+    [SerializeField] private float spreaderRange = 2f;
+    [SerializeField] private float policeForce = 0.2f;
 
     public Action<Bean> OnBecomeSour, OnBecomeSweet, OnBecomePolice, OnUnPolice;
     
@@ -68,6 +70,7 @@ public class Bean : MonoBehaviour, ICorruptible
     {
         bool wasSour = IsSour;
         corruption += value;
+        Debug.Log(value);
         corruption = Mathf.Clamp01(corruption);
         UpdateVisuals();
         
@@ -80,10 +83,9 @@ public class Bean : MonoBehaviour, ICorruptible
         renderer.color = colorGradient.Evaluate(corruption / sourThreshold);
     }
 
+
     [ContextMenu("Become Police")]
-    private bool BecomePolice() => BecomePolice(0.1f);
-    
-    public bool BecomePolice(float policeForce)
+    public bool BecomePolice()
     {
         if (IsPolice)
         {
@@ -95,16 +97,20 @@ public class Bean : MonoBehaviour, ICorruptible
         OnBecomePolice(this);
         policeVisuals.SetActive(true);
         var spreader = gameObject.AddComponent<Spreader>();
+        spreader.Range = spreaderRange;
         spreader.Value = IsSour ? policeForce : -policeForce;
-        OnBecomeSour += InvertSpreadValue;
-        OnBecomeSweet += InvertSpreadValue;
+        OnBecomeSour += UpdateSpreadValue;
+        OnBecomeSweet += UpdateSpreadValue;
         return true;
     }
 
-    private void InvertSpreadValue(Bean b)
+    private void UpdateSpreadValue(Bean b)
     {
+        Debug.Log("Update Value");
         var spreader = b.GetComponent<Spreader>();
-        spreader.Value = -spreader.Value;
+        Debug.Log("Old Value " + spreader.Value);
+        spreader.Value = IsSour ? policeForce : -policeForce;
+        Debug.Log("New Value " + spreader.Value);
     }
 
     public void UnPolice()
@@ -118,7 +124,7 @@ public class Bean : MonoBehaviour, ICorruptible
         OnUnPolice(this);
         policeVisuals.SetActive(false);
         Destroy(gameObject.GetComponent<Spreader>());
-        OnBecomeSour -= InvertSpreadValue;
-        OnBecomeSweet -= InvertSpreadValue;
+        OnBecomeSour -= UpdateSpreadValue;
+        OnBecomeSweet -= UpdateSpreadValue;
     }
 }

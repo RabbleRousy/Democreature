@@ -9,7 +9,6 @@ public class GameManager : MonoBehaviour
 
     public float BrainCorruption { get; set; }
     public float HeartCorruption  { get; set; }
-    public float ImmuneSystemCorruption  { get; set; }
     public float BeanCorruption  { get; set; }
     
     public int Blood  { get; set; }
