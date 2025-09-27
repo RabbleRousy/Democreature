@@ -47,6 +47,11 @@ namespace DefaultNamespace
                }
            }
         }
-        
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.coral;
+            Gizmos.DrawWireSphere(transform.position,range);
+        }
     }
 }
