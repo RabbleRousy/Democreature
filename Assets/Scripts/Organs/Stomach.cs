@@ -38,6 +38,13 @@ public class Stomach : MonoBehaviour
     private int currentFactChecker;
     private int foodSpawnCounter;
 
+    public bool CanBuyHeartStation => GameManager.Instance.Blood >= stationCost && availablePointsHeart.Count > 0;
+    public bool CanBuyBrainStation => GameManager.Instance.Blood >= stationCost && availablePointsBrain.Count > 0;
+    public bool CanBuyStomachStation => GameManager.Instance.Blood >= stationCost && availablePointsStomach.Count > 0;
+
+    public bool CanBuyFactChecker =>
+        GameManager.Instance.Blood >= factCheckerCost && currentFactChecker < maxFactChecker;
+
 
     private void Awake()
     {
@@ -65,7 +72,7 @@ public class Stomach : MonoBehaviour
 
     public void BuyFactChecker()
     {
-        if (GameManager.Instance.Blood >= factCheckerCost)
+        if (CanBuyFactChecker)
         {
             currentFactChecker++;
             GameManager.Instance.Blood -= factCheckerCost;
