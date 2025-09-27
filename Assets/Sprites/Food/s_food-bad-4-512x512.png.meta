@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 98687e7776b7d4982a7af5e518860e21
+guid: 5ff8458c6926a4d4694781610a3eb8aa
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7879019290755753128
-    second: s_food-noodles_0
+      213: 1692330032785429172
+    second: s_food-bad-4-512x512_0
+  - first:
+      213: -8044665367686700163
+    second: s_food-bad-4-512x512_1
+  - first:
+      213: -1168012099208923084
+    second: s_food-bad-4-512x512_2
+  - first:
+      213: -5419162559136889297
+    second: s_food-bad-4-512x512_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +105,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: VisionOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: s_food-noodles_0
+      name: s_food-bad-4-512x512_0
       rect:
         serializedVersion: 2
-        x: 49
-        y: 44
-        width: 444
-        height: 414
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85b9d0c23b918a290800000000000000
-      internalID: -7879019290755753128
+      spriteID: 4b296eec23d5c7710800000000000000
+      internalID: 1692330032785429172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_food-bad-4-512x512_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d73a526787b9b5090800000000000000
+      internalID: -8044665367686700163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_food-bad-4-512x512_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4383b452f236acfe0800000000000000
+      internalID: -1168012099208923084
       vertices: []
       indices: 
       edges: []
@@ -138,7 +178,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 483618396f9df1c48a9e68c385e449ae
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +186,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      s_food-noodles_0: -7879019290755753128
+      s_food-bad-4-512x512_0: 1692330032785429172
+      s_food-bad-4-512x512_1: -8044665367686700163
+      s_food-bad-4-512x512_2: -1168012099208923084
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

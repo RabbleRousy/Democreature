@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 37be1a4dc48614925b88d4f28edcdf6f
+guid: 33d24cc67bbd37741931b5301af191d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2237447071391321654
-    second: s_food-pancakes_0
+      213: 4809081152638799283
+    second: s_food-good-4-512x512_0
+  - first:
+      213: -2331343046653804262
+    second: s_food-good-4-512x512_1
+  - first:
+      213: -4207981077162348265
+    second: s_food-good-4-512x512_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +102,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: VisionOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: s_food-pancakes_0
+      name: s_food-good-4-512x512_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 103
-        width: 492
-        height: 381
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac17bf93ebdf2f0e0800000000000000
-      internalID: -2237447071391321654
+      spriteID: 3bdcf0724d94db240800000000000000
+      internalID: 4809081152638799283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_food-good-4-512x512_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a118f9ed9d765afd0800000000000000
+      internalID: -2331343046653804262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_food-good-4-512x512_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7113c22518f3a95c0800000000000000
+      internalID: -4207981077162348265
       vertices: []
       indices: 
       edges: []
@@ -138,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5a897e145b2d77f468d95ff9a2581841
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +183,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      s_food-pancakes_0: -2237447071391321654
+      s_food-good-4-512x512_0: 4809081152638799283
+      s_food-good-4-512x512_1: -2331343046653804262
+      s_food-good-4-512x512_2: -4207981077162348265
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

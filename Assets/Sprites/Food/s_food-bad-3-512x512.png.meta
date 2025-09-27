@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 0d29edc16df0640679444b6ffd7afb74
+guid: c1cfd71ebb8670347ae96e9afedb728e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5027824288990492655
-    second: s_food-salad_0
+      213: 8743060144096481930
+    second: s_food-bad-3-512x512_0
+  - first:
+      213: -346457884404190962
+    second: s_food-bad-3-512x512_1
+  - first:
+      213: -8996438579300390719
+    second: s_food-bad-3-512x512_2
+  - first:
+      213: 8889822343360331489
+    second: s_food-bad-3-512x512_3
+  - first:
+      213: -132061307754562317
+    second: s_food-bad-3-512x512_4
+  - first:
+      213: 4288891515362162082
+    second: s_food-bad-3-512x512_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +111,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: VisionOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: s_food-salad_0
+      name: s_food-bad-3-512x512_0
       rect:
         serializedVersion: 2
-        x: 61
-        y: 67
-        width: 442
-        height: 420
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11804ad9274993ab0800000000000000
-      internalID: -5027824288990492655
+      spriteID: a821fbad0e6955970800000000000000
+      internalID: 8743060144096481930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_food-bad-3-512x512_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e017476c362213bf0800000000000000
+      internalID: -346457884404190962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_food-bad-3-512x512_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c82e2df6ca362380800000000000000
+      internalID: -8996438579300390719
       vertices: []
       indices: 
       edges: []
@@ -138,7 +184,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: baadf697f3aff6643bc13884302f405a
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +192,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      s_food-salad_0: -5027824288990492655
+      s_food-bad-3-512x512_0: 8743060144096481930
+      s_food-bad-3-512x512_1: -346457884404190962
+      s_food-bad-3-512x512_2: -8996438579300390719
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

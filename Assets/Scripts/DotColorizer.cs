@@ -18,7 +18,7 @@ public class DotColorizer : MonoBehaviour
     [ContextMenu("UpdateDots")]
     public void UpdateDots()
     {
-        float sourPerc = BeanManager.Instance.GetSourPercentage();
+        float sourPerc = GameManager.Instance.HeartCorruption;
         int limit = (int)(dots.Length * sourPerc);
 
         StartCoroutine(Repaint(limit));

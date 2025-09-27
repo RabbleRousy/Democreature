@@ -1,19 +1,52 @@
 fileFormatVersion: 2
-guid: 0476bb012083a224fa0360ad15306a7a
+guid: 09c777149a36d5e4eac3364fe5584b69
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2617112596107758965
-    second: S_Bakterie_128x128_8fps_0
+      213: -180132488654331389
+    second: s_food-bad-1-512x512_0
   - first:
-      213: 3846243771653326943
-    second: S_Bakterie_128x128_8fps_1
+      213: -5146507234910108204
+    second: s_food-bad-1-512x512_1
   - first:
-      213: -6833777494716407756
-    second: S_Bakterie_128x128_8fps_2
+      213: 2062109448573323615
+    second: s_food-bad-1-512x512_2
   - first:
-      213: -7371036623995274595
-    second: S_Bakterie_128x128_8fps_3
+      213: 6533220480525033948
+    second: s_food-bad-1-512x512_3
+  - first:
+      213: -4548784053010283367
+    second: s_food-bad-1-512x512_4
+  - first:
+      213: -7908948439929084942
+    second: s_food-bad-1-512x512_5
+  - first:
+      213: -6655269982217817315
+    second: s_food-bad-1-512x512_6
+  - first:
+      213: -3792620842212905001
+    second: s_food-bad-1-512x512_7
+  - first:
+      213: 2856058421307459967
+    second: s_food-bad-1-512x512_8
+  - first:
+      213: -1035413494929339379
+    second: s_food-bad-1-512x512_9
+  - first:
+      213: -3666175304734774599
+    second: s_food-bad-1-512x512_10
+  - first:
+      213: 3174638618169832544
+    second: s_food-bad-1-512x512_11
+  - first:
+      213: -5975528310761042040
+    second: s_food-bad-1-512x512_12
+  - first:
+      213: -916453755385407865
+    second: s_food-bad-1-512x512_13
+  - first:
+      213: -9018485134349812383
+    second: s_food-bad-1-512x512_14
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -60,7 +93,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 180
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -109,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: S_Bakterie_128x128_8fps_0
+      name: s_food-bad-1-512x512_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 128
-        height: 128
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 57d04344a0ad15420800000000000000
-      internalID: 2617112596107758965
+      spriteID: 3026049b47a008df0800000000000000
+      internalID: -180132488654331389
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: S_Bakterie_128x128_8fps_1
+      name: s_food-bad-1-512x512_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
+        x: 512
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -146,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f5884f0055a906530800000000000000
-      internalID: 3846243771653326943
+      spriteID: 4d5843defeee398b0800000000000000
+      internalID: -5146507234910108204
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: S_Bakterie_128x128_8fps_2
+      name: s_food-bad-1-512x512_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,30 +201,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 430ae51539b8921a0800000000000000
-      internalID: -6833777494716407756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S_Bakterie_128x128_8fps_3
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d9afd507e31d4b990800000000000000
-      internalID: -7371036623995274595
+      spriteID: f5980323e951e9c10800000000000000
+      internalID: 2062109448573323615
       vertices: []
       indices: 
       edges: []
@@ -200,7 +211,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b0d3faa7afe010643862eb50d62b71ab
+    spriteID: 76e5a6be03337c14cb723ff09b80bf65
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +221,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      S_Bakterie_128x128_8fps_0: 2617112596107758965
-      S_Bakterie_128x128_8fps_1: 3846243771653326943
-      S_Bakterie_128x128_8fps_2: -6833777494716407756
-      S_Bakterie_128x128_8fps_3: -7371036623995274595
+      s_food-bad-1-512x512_0: -180132488654331389
+      s_food-bad-1-512x512_1: -5146507234910108204
+      s_food-bad-1-512x512_2: 2062109448573323615
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
