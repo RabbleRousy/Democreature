@@ -70,7 +70,7 @@ public class BeanManager : MonoBehaviour
 
         if (bean != null)
         {
-            return bean.BecomePolice();
+            return bean.BecomePolice(0.1f);
         }
 
         return false;

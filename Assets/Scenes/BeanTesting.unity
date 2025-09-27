@@ -3569,6 +3569,10 @@ PrefabInstance:
       propertyPath: policePerUpgrade
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4963803940801557882, guid: 47f1a0618ce1c4b9fa37dc0513993955, type: 3}
+      propertyPath: baseCorruptionChance
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6474682763823002077, guid: 47f1a0618ce1c4b9fa37dc0513993955, type: 3}
       propertyPath: m_Name
       value: ImmuneSystem
@@ -3943,6 +3947,10 @@ PrefabInstance:
     - target: {fileID: 3370275497941437854, guid: b4643085768ef471b8b5492c7c8deaed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148752884338043742, guid: b4643085768ef471b8b5492c7c8deaed, type: 3}
+      propertyPath: value
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

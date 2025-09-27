@@ -1,19 +1,23 @@
 using System;
+using DefaultNamespace;
 using UnityEngine;
 
 public class Bean : MonoBehaviour, ICorruptible
 {
     [SerializeField] private float corruption;
+    [SerializeField] private uint lifeTime;
+    [SerializeField] private GameObject policeVisuals;
+    [SerializeField] private Gradient colorGradient;
+    [SerializeField] private float sourThreshold = 0.9f;
 
-    private static float sourThreshold = 0.9f;
+    public Action<Bean> OnBecomeSour, OnBecomeSweet, OnBecomePolice, OnUnPolice;
+    
+    private SpriteRenderer renderer;
     
     public bool IsSour => corruption >= sourThreshold;
     public bool IsPolice { get; private set; }
 
-    public Action<Bean> OnBecomeSour, OnBecomeSweet, OnBecomePolice, OnUnPolice;
 
-    [SerializeField] private uint lifeTime;
-    [SerializeField] private GameObject policeVisuals;
  
     private void Awake()
     {
@@ -23,6 +27,8 @@ public class Bean : MonoBehaviour, ICorruptible
         OnUnPolice += BeanManager.Instance.RemovePolice;
 
         GameManager.Instance.OnTick += ReduceLifeTime;
+        
+        renderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void ReduceLifeTime()
@@ -60,15 +66,24 @@ public class Bean : MonoBehaviour, ICorruptible
 
     public void Corrupt(float value)
     {
-        bool wasParasite = IsSour;
+        bool wasSour = IsSour;
         corruption += value;
         corruption = Mathf.Clamp01(corruption);
+        UpdateVisuals();
         
-        if (wasParasite && !IsSour) OnBecomeSweet?.Invoke(this);
-        else if (!wasParasite && IsSour) OnBecomeSour?.Invoke(this);
+        if (wasSour && !IsSour) OnBecomeSweet?.Invoke(this);
+        else if (!wasSour && IsSour) OnBecomeSour?.Invoke(this);
     }
 
-    public bool BecomePolice()
+    private void UpdateVisuals()
+    {
+        renderer.color = colorGradient.Evaluate(corruption / sourThreshold);
+    }
+
+    [ContextMenu("Become Police")]
+    private bool BecomePolice() => BecomePolice(0.1f);
+    
+    public bool BecomePolice(float policeForce)
     {
         if (IsPolice)
         {
@@ -79,7 +94,17 @@ public class Bean : MonoBehaviour, ICorruptible
         IsPolice = true;
         OnBecomePolice(this);
         policeVisuals.SetActive(true);
+        var spreader = gameObject.AddComponent<Spreader>();
+        spreader.Value = IsSour ? policeForce : -policeForce;
+        OnBecomeSour += InvertSpreadValue;
+        OnBecomeSweet += InvertSpreadValue;
         return true;
+    }
+
+    private void InvertSpreadValue(Bean b)
+    {
+        var spreader = b.GetComponent<Spreader>();
+        spreader.Value = -spreader.Value;
     }
 
     public void UnPolice()
@@ -92,5 +117,8 @@ public class Bean : MonoBehaviour, ICorruptible
         IsPolice = false;
         OnUnPolice(this);
         policeVisuals.SetActive(false);
+        Destroy(gameObject.GetComponent<Spreader>());
+        OnBecomeSour -= InvertSpreadValue;
+        OnBecomeSweet -= InvertSpreadValue;
     }
 }
