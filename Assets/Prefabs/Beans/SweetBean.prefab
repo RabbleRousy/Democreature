@@ -168,7 +168,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 99
   m_Sprite: {fileID: 1021127377009373424, guid: b06f58f1e3278ff4691a96e16f1f36ae, type: 3}
   m_Color: {r: 0.48235294, g: 0, b: 1, a: 1}
   m_FlipX: 0
@@ -514,6 +514,8 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   sourThreshold: 0.7
+  spreaderRange: 2
+  policeForce: 0.2
   possibleAnimators:
   - {fileID: 9100000, guid: df60664102c714feea8bf704d0ee0471, type: 2}
   - {fileID: 9100000, guid: de55e9d4961424eb1b32b23c807ad59e, type: 2}

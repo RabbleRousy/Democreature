@@ -26,7 +26,7 @@ public class BeanManager : MonoBehaviour
 
     public float GetSourPercentage()
     {
-        return (float)sourBeans.Count / (sweetBeans.Count + sourBeans.Count);
+        return (float)sourBeans.Count / (allBeans.Count);
     }
 
     public void AddBean(Bean bean) => allBeans.Add(bean);
@@ -41,14 +41,14 @@ public class BeanManager : MonoBehaviour
     public void SweetToSour(Bean bean)
     {
         sweetBeans.Remove(bean);
-        sourBeans.Add(bean);
+        if(!sourBeans.Contains(bean))sourBeans.Add(bean);
         GameManager.Instance.BeanCorruption = GetSourPercentage();
     }
 
     public void SourToSweet(Bean bean)
     {
         sourBeans.Remove(bean);
-        sweetBeans.Add(bean);
+        if(!sweetBeans.Contains(bean)) sweetBeans.Add(bean);
         GameManager.Instance.BeanCorruption = GetSourPercentage();
     }
 
@@ -71,7 +71,7 @@ public class BeanManager : MonoBehaviour
 
         if (bean != null)
         {
-            return bean.BecomePolice(0.1f);
+            return bean.BecomePolice();
         }
 
         return false;
