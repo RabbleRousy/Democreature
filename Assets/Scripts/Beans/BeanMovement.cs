@@ -1,10 +1,14 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class BeanMovement : MonoBehaviour
 {
-    [SerializeField] private Transform target;
+    private List<AreaManager> possibleTargets, usedTargets;
+    private Vector3 currentTarget;
     private NavMeshAgent agent;
 
     private void Awake()
@@ -12,10 +16,33 @@ public class BeanMovement : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
     }
 
+    public void InitializeTargets(List<AreaManager> possibleTargets)
+    {
+        this.possibleTargets = possibleTargets;
+        usedTargets = new List<AreaManager>();
+        FindNewTarget();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (target)
-            agent.SetDestination(target.position);
+        if (Vector3.Distance(transform.position, currentTarget) < 1f)
+        {
+            FindNewTarget();
+        }
+    }
+
+    private void FindNewTarget()
+    {
+        if (possibleTargets.Count == 0)
+        {
+            possibleTargets = usedTargets;
+        }
+        
+        var newTarget = possibleTargets[Random.Range(0, possibleTargets.Count)];
+        possibleTargets.Remove(newTarget);
+        usedTargets.Add(newTarget);
+        currentTarget = newTarget.GetRandomPoint();
+        agent.SetDestination(currentTarget);
     }
 }

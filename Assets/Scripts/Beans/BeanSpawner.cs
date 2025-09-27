@@ -1,17 +1,19 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class BeanSpawner : MonoBehaviour
 {
-    private BoxCollider2D[] spawnAreas;
+    private AreaManager areaManager;
 
-    [SerializeField] private BeanCorruption beanToSpawn;
+    [SerializeField] private BeanMovement beanToSpawn;
     [SerializeField] private int minAmountPerTick, maxAmountPerTick;
+    [SerializeField] private AreaManager[] possibleTargets;
 
     private void Awake()
     {
-        spawnAreas = GetComponentsInChildren<BoxCollider2D>();
+        areaManager = GetComponent<AreaManager>();
     }
 
     public void OnEnable()
@@ -29,14 +31,9 @@ public class BeanSpawner : MonoBehaviour
         int amount = Random.Range(minAmountPerTick, maxAmountPerTick + 1);
         for (int i = 0; i < amount; i++)
         {
-            Vector3 pos = GetRandomSpawnPos();
-            Instantiate(beanToSpawn, pos, Quaternion.identity);
+            Vector3 pos = areaManager.GetRandomPoint();
+            var bean = Instantiate(beanToSpawn, pos, Quaternion.identity);
+            bean.InitializeTargets(possibleTargets.ToList());
         }
-    }
-
-    private Vector3 GetRandomSpawnPos()
-    {
-        var area = spawnAreas[Random.Range(0, spawnAreas.Length)];
-        return area.bounds.min + new Vector3(Random.Range(0, area.bounds.size.x), Random.Range(0, area.bounds.size.y), 0f);
     }
 }
