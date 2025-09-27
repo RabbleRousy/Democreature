@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 8a8063116650f4d709c3ab3848b88872
+guid: 50ae5a7095448cb4084fe75a1cbacf36
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2567696807424617719
-    second: s_food-fishbone_0
+      213: 95970208485445522
+    second: s_food-good-3-512x512_0
+  - first:
+      213: 955766098441054845
+    second: s_food-good-3-512x512_1
+  - first:
+      213: -1857330491916570863
+    second: s_food-good-3-512x512_2
+  - first:
+      213: 5770913179084383236
+    second: s_food-good-3-512x512_3
+  - first:
+      213: -849870536770529323
+    second: s_food-good-3-512x512_4
+  - first:
+      213: -7194950628450960510
+    second: s_food-good-3-512x512_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +111,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: VisionOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: s_food-fishbone_0
+      name: s_food-good-3-512x512_0
       rect:
         serializedVersion: 2
-        x: 63
-        y: 2
-        width: 377
-        height: 484
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9031d8e9b55bd5cd0800000000000000
-      internalID: -2567696807424617719
+      spriteID: 29f8bc96564f45100800000000000000
+      internalID: 95970208485445522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_food-good-3-512x512_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7aa0f1e330934d00800000000000000
+      internalID: 955766098441054845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_food-good-3-512x512_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11fafc612cf6936e0800000000000000
+      internalID: -1857330491916570863
       vertices: []
       indices: 
       edges: []
@@ -138,7 +184,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6858020e518eb4648be29d5b5eb4dfcf
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +192,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      s_food-fishbone_0: -2567696807424617719
+      s_food-good-3-512x512_0: 95970208485445522
+      s_food-good-3-512x512_1: 955766098441054845
+      s_food-good-3-512x512_2: -1857330491916570863
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

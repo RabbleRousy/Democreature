@@ -1,10 +1,43 @@
 fileFormatVersion: 2
-guid: 2ce4337d51741418b8cd03150c54983d
+guid: 5e8da4e53a21415408f805b623d69f2f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8896236583927897934
-    second: s_food-icecream_0
+      213: -3040094074062286043
+    second: s_food-good-2-512x512_0
+  - first:
+      213: -2363806061248529758
+    second: s_food-good-2-512x512_1
+  - first:
+      213: -4357583349039566796
+    second: s_food-good-2-512x512_2
+  - first:
+      213: -31886428650829342
+    second: s_food-good-2-512x512_3
+  - first:
+      213: 2838530523206556107
+    second: s_food-good-2-512x512_4
+  - first:
+      213: -573669173164184386
+    second: s_food-good-2-512x512_5
+  - first:
+      213: -4522899329235767299
+    second: s_food-good-2-512x512_6
+  - first:
+      213: -177590691396413261
+    second: s_food-good-2-512x512_7
+  - first:
+      213: -7925129724284425913
+    second: s_food-good-2-512x512_8
+  - first:
+      213: 6171686066500548013
+    second: s_food-good-2-512x512_9
+  - first:
+      213: 8570201340774618022
+    second: s_food-good-2-512x512_10
+  - first:
+      213: -5551148570560420894
+    second: s_food-good-2-512x512_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,40 +129,71 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: VisionOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: s_food-icecream_0
+      name: s_food-good-2-512x512_0
       rect:
         serializedVersion: 2
-        x: 137
-        y: 92
-        width: 219
-        height: 376
+        x: 0
+        y: 512
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4f5bdee908c57b70800000000000000
-      internalID: 8896236583927897934
+      spriteID: 5235fb7fb8a6fc5d0800000000000000
+      internalID: -3040094074062286043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_food-good-2-512x512_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aabd5949e2123fd0800000000000000
+      internalID: -2363806061248529758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: s_food-good-2-512x512_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430f6511801c683c0800000000000000
+      internalID: -4357583349039566796
       vertices: []
       indices: 
       edges: []
@@ -138,7 +202,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 4e97bf580742661458098f6f3c4902de
     internalID: 0
     vertices: []
     indices: 
@@ -146,9 +210,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      s_food-icecream_0: 8896236583927897934
+      s_food-good-2-512x512_0: -3040094074062286043
+      s_food-good-2-512x512_1: -2363806061248529758
+      s_food-good-2-512x512_2: -4357583349039566796
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
