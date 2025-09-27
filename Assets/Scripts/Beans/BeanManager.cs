@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BeanManager : MonoBehaviour
@@ -8,9 +9,15 @@ public class BeanManager : MonoBehaviour
 
     private List<BeanCorruption> allBeans, sweetBeans, sourBeans, policeBeans;
 
+    public int PoliceBeans => policeBeans.Count;
+
     private void Awake()
     {
         Instance = this;
+        allBeans = new List<BeanCorruption>();
+        sweetBeans = new List<BeanCorruption>();
+        sourBeans = new List<BeanCorruption>();
+        policeBeans = new List<BeanCorruption>();
     }
 
     public float GetParasitePercentage()
@@ -33,5 +40,31 @@ public class BeanManager : MonoBehaviour
     {
         sourBeans.Remove(bean);
         sweetBeans.Add(bean);
+    }
+
+    public bool TryCreatePoliceBean(bool shouldBeSourBean)
+    {
+        BeanCorruption bean;
+        if (shouldBeSourBean)
+        {
+            bean = sourBeans.FirstOrDefault(bean => !policeBeans.Contains(bean));
+        }
+        else
+        {
+            bean = sourBeans.FirstOrDefault(bean => !policeBeans.Contains(bean));
+        }
+
+        if (bean == null)
+        {
+            bean = allBeans.FirstOrDefault(bean => !policeBeans.Contains(bean));
+        }
+
+        if (bean != null)
+        {
+            policeBeans.Add(bean);
+            return true;
+        }
+
+        return false;
     }
 }
