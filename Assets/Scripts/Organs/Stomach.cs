@@ -103,11 +103,17 @@ public class Stomach : MonoBehaviour
         float totalCorruption = 0;
         for (int i = 0; i < foodAmount; i++)
         {
+
+            if (availableFoodSpawns.Count <= 0)
+            {
+                availableFoodSpawns = new List<Transform>(foodSpawns);
+            }
+            
             int index = Random.Range(0, availableFoodSpawns.Count);
             Instantiate(foodPrefabs[Random.Range(0,foodPrefabs.Length)], availableFoodSpawns[index].position, Quaternion.identity);
             availableFoodSpawns.RemoveAt(index);
 
-            totalCorruption += Random.Range(-1f, 1f);
+            totalCorruption += Random.Range(0.1f, 0.25f);
             
             yield return new WaitForSeconds(0.5f);
         }
