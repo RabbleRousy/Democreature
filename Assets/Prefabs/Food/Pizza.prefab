@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -192692629379940849, guid: ce268f192ea77a6419c6fb1416e73520, type: 3}
+      propertyPath: animName
+      value: PI
+      objectReference: {fileID: 0}
     - target: {fileID: 4024620755335734780, guid: ce268f192ea77a6419c6fb1416e73520, type: 3}
       propertyPath: m_Name
       value: Pizza

@@ -14,8 +14,9 @@ namespace DefaultNamespace.Organs
 
         public void UnPolice()
         {
-            if(CanUnPolice()) return;
+            if(!CanUnPolice()) return;
             
+            GameManager.Instance.Blood -= bloodCost;
             int amount = Mathf.FloorToInt(Random.Range(minAmount, maxAmount) * 1 - GameManager.Instance.BrainCorruption);
             for (int i = 0; i < amount; i++)
             {
