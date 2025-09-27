@@ -9,8 +9,6 @@ namespace DefaultNamespace
         [SerializeField] private float range;
         [SerializeField] private float value;
 
-        private bool useCorruptionChance;
-
         public float Value
         {
             get => value;
@@ -34,9 +32,10 @@ namespace DefaultNamespace
            {
                if (collider.gameObject.TryGetComponent(out ICorruptible corruptible))
                {
-                   if (useCorruptionChance)
+                   if (UseCorruptionChance)
                    {
                       int direction = Random.Range(0f, 1f) < CorruptionChance ? 1 : -1;
+                      Debug.Log(direction);
                       corruptible.Corrupt(value * direction);
                    }
                    else
