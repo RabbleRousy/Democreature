@@ -19,6 +19,7 @@ public class Bean : MonoBehaviour, ICorruptible
     public Action<Bean> OnBecomeSour, OnBecomeSweet, OnBecomePolice, OnUnPolice;
     
     private SpriteRenderer renderer;
+    private Spreader spreader;
     
     public bool IsSour => corruption >= sourThreshold;
     public bool IsPolice { get; private set; }
@@ -35,6 +36,7 @@ public class Bean : MonoBehaviour, ICorruptible
         GameManager.Instance.OnLateTick += ReduceLifeTime;
         
         renderer = GetComponentInChildren<SpriteRenderer>();
+        spreader = GetComponent<Spreader>();
         // Pick random animator
         GetComponent<Animator>().runtimeAnimatorController = possibleAnimators[Random.Range(0, possibleAnimators.Length)];
         
@@ -108,7 +110,7 @@ public class Bean : MonoBehaviour, ICorruptible
         IsPolice = true;
         OnBecomePolice(this);
         policeVisuals.SetActive(true);
-        var spreader = gameObject.AddComponent<Spreader>();
+        spreader.enabled = true;
         spreader.Range = spreaderRange;
         spreader.Value = IsSour ? policeForce : -policeForce;
         OnBecomeSour += UpdateSpreadValue;
@@ -135,7 +137,8 @@ public class Bean : MonoBehaviour, ICorruptible
         IsPolice = false;
         OnUnPolice(this);
         policeVisuals.SetActive(false);
-        Destroy(gameObject.GetComponent<Spreader>());
+        spreader.enabled = false;
+        
         OnBecomeSour -= UpdateSpreadValue;
         OnBecomeSweet -= UpdateSpreadValue;
     }

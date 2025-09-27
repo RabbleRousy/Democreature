@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 4901316753641557050}
   - component: {fileID: 1891412787283502340}
   - component: {fileID: 7790403336220245435}
+  - component: {fileID: 6647559779918221939}
   m_Layer: 0
   m_Name: SweetBean
   m_TagString: Untagged
@@ -445,9 +446,9 @@ NavMeshAgent:
   m_Radius: 0.49999997
   m_Speed: 3.5
   m_Acceleration: 8
-  avoidancePriority: 50
+  avoidancePriority: 30
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -577,6 +578,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6647559779918221939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6137973648930127473}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de742e82404466bb06c56536637ee61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.Spreader
+  range: 0
+  value: 0
+  vfxPrefab: {fileID: 4837445403221927775, guid: 4db83f5ae94bca545ae9354118b62f61, type: 3}
 --- !u!1 &8080352814620226504
 GameObject:
   m_ObjectHideFlags: 0
