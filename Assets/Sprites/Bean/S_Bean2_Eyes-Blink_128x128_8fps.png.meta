@@ -117,6 +117,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -124,12 +137,12 @@ TextureImporter:
       name: S_Bean2_Eyes-Blink_128x128_8fps_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 196
-        width: 25
-        height: 29
+        x: 0
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -146,12 +159,12 @@ TextureImporter:
       name: S_Bean2_Eyes-Blink_128x128_8fps_1
       rect:
         serializedVersion: 2
-        x: 76
-        y: 196
-        width: 25
-        height: 31
+        x: 128
+        y: 128
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -168,12 +181,12 @@ TextureImporter:
       name: S_Bean2_Eyes-Blink_128x128_8fps_2
       rect:
         serializedVersion: 2
-        x: 178
-        y: 187
-        width: 26
-        height: 16
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -190,12 +203,12 @@ TextureImporter:
       name: S_Bean2_Eyes-Blink_128x128_8fps_3
       rect:
         serializedVersion: 2
-        x: 208
-        y: 191
-        width: 24
-        height: 14
+        x: 128
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -208,99 +221,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: S_Bean2_Eyes-Blink_128x128_8fps_4
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 66
-        width: 26
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 860ec5528f4585bf0800000000000000
-      internalID: -335424747483635608
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S_Bean2_Eyes-Blink_128x128_8fps_5
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 70
-        width: 24
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 44aa11c97aef6d930800000000000000
-      internalID: 4167798501009369668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S_Bean2_Eyes-Blink_128x128_8fps_6
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 66
-        width: 25
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d1a60c27c494d7040800000000000000
-      internalID: 4646950983207774749
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: S_Bean2_Eyes-Blink_128x128_8fps_7
-      rect:
-        serializedVersion: 2
-        x: 206
-        y: 69
-        width: 25
-        height: 30
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5fedffe925b536ac0800000000000000
-      internalID: -3863143644940738827
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0c54ed48352f24a8aa0649daeefdf89d
     internalID: 0
     vertices: []
     indices: 
@@ -308,16 +233,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":2.0,"y":2.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       S_Bean2_Eyes-Blink_128x128_8fps_0: 1615788741662648090
       S_Bean2_Eyes-Blink_128x128_8fps_1: 3684331123185149857
       S_Bean2_Eyes-Blink_128x128_8fps_2: -8488009845155375852
       S_Bean2_Eyes-Blink_128x128_8fps_3: 1955022940110132425
-      S_Bean2_Eyes-Blink_128x128_8fps_4: -335424747483635608
-      S_Bean2_Eyes-Blink_128x128_8fps_5: 4167798501009369668
-      S_Bean2_Eyes-Blink_128x128_8fps_6: 4646950983207774749
-      S_Bean2_Eyes-Blink_128x128_8fps_7: -3863143644940738827
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -32,6 +32,13 @@ public class BeanMovement : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        // Fix x rotation
+        var rot = transform.rotation.eulerAngles;
+        transform.rotation = Quaternion.Euler(-90f, rot.y, rot.z);
+    }
+
     private void FindNewTarget()
     {
         if (possibleTargets.Count == 0)

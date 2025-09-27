@@ -1,14 +1,17 @@
 using System;
 using DefaultNamespace;
+using UnityEditor.Animations;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Bean : MonoBehaviour, ICorruptible
 {
     [SerializeField] private float corruption;
     [SerializeField] private uint lifeTime;
-    [SerializeField] private GameObject policeVisuals;
+    [SerializeField] private GameObject policeVisuals, sourVisuals;
     [SerializeField] private Gradient colorGradient;
     [SerializeField] private float sourThreshold = 0.9f;
+    [SerializeField] private AnimatorController[] possibleAnimators;
 
     public Action<Bean> OnBecomeSour, OnBecomeSweet, OnBecomePolice, OnUnPolice;
     
@@ -29,6 +32,8 @@ public class Bean : MonoBehaviour, ICorruptible
         GameManager.Instance.OnTick += ReduceLifeTime;
         
         renderer = GetComponentInChildren<SpriteRenderer>();
+        // Pick random animator
+        GetComponent<Animator>().runtimeAnimatorController = possibleAnimators[Random.Range(0, possibleAnimators.Length)];
     }
 
     private void ReduceLifeTime()
@@ -78,6 +83,7 @@ public class Bean : MonoBehaviour, ICorruptible
     private void UpdateVisuals()
     {
         renderer.color = colorGradient.Evaluate(corruption / sourThreshold);
+        if (IsSour) sourVisuals.SetActive(true);
     }
 
     [ContextMenu("Become Police")]
