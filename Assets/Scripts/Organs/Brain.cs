@@ -9,17 +9,23 @@ namespace DefaultNamespace.Organs
         [SerializeField] private int bloodCost;
         [SerializeField] private int minAmount;
         [SerializeField] private int maxAmount;
-        
+
+        public int UnPoliceCost => bloodCost;
 
         public void UnPolice()
         {
-            if(GameManager.Instance.Blood < bloodCost) return;
+            if(CanUnPolice()) return;
             
             int amount = Mathf.FloorToInt(Random.Range(minAmount, maxAmount) * 1 - GameManager.Instance.BrainCorruption);
             for (int i = 0; i < amount; i++)
             {
                 BeanManager.Instance.TryUnPolice(Random.Range(0f,1f) < GameManager.Instance.BrainCorruption);
             }
+        }
+
+        public bool CanUnPolice()
+        {
+            return GameManager.Instance.Blood >= bloodCost && BeanManager.Instance.PoliceBeans > 0;
         }
     }
 }
