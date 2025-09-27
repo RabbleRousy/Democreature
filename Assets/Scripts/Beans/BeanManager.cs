@@ -7,7 +7,7 @@ public class BeanManager : MonoBehaviour
 {
     public static BeanManager Instance;
 
-    private List<BeanCorruption> allBeans, sweetBeans, sourBeans, policeBeans;
+    [SerializeField] private List<BeanCorruption> allBeans, sweetBeans, sourBeans, policeBeans;
 
     public int PoliceBeans => policeBeans.Count;
 
