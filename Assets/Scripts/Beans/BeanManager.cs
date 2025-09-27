@@ -17,6 +17,8 @@ public class BeanManager : MonoBehaviour
     public int AllBeans => allBeans.Count;
     public int SweetBeans => sweetBeans.Count;
 
+    public int PatrollingBeans => patrollingBeans.Count;
+
     private void Awake()
     {
         Instance = this;
