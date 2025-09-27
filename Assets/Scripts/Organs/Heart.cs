@@ -38,5 +38,6 @@ public class Heart : MonoBehaviour
     {
         GameManager.Instance.HeartCorruption = BeanManager.Instance.GetSourPercentage();
         spreader.CorruptionChance = GameManager.Instance.HeartCorruption;
+        DotColorizer.Instance.UpdateDots();
     }
 }
