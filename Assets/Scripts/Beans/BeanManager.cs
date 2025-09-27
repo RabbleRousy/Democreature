@@ -1,11 +1,12 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BeanManager : MonoBehaviour
 {
     public static BeanManager Instance;
 
-    [SerializeField] private uint symbiontAmount, parasiteAmount;
+    private List<BeanCorruption> allBeans, sweetBeans, sourBeans, policeBeans;
 
     private void Awake()
     {
@@ -14,23 +15,23 @@ public class BeanManager : MonoBehaviour
 
     public float GetParasitePercentage()
     {
-        return (float)parasiteAmount / symbiontAmount;
+        return (float)sourBeans.Count / (sweetBeans.Count + sourBeans.Count);
     }
 
-    public void AddSymbiont() => symbiontAmount++;
-    public void RemoveSymbiont() => symbiontAmount--;
-    public void AddParasite() => parasiteAmount++;
-    public void RemoveParasite() => parasiteAmount--;
+    public void AddSweetBean(BeanCorruption bean) => sweetBeans.Add(bean);
+    public void RemoveSweetBean(BeanCorruption bean) => sweetBeans.Remove(bean);
+    public void AddSourBean(BeanCorruption bean) => sourBeans.Add(bean);
+    public void RemoveSourBean(BeanCorruption bean) => sourBeans.Remove(bean);
 
-    public void ConvertToSymbiont()
+    public void SweetToSour(BeanCorruption bean)
     {
-        symbiontAmount++;
-        parasiteAmount--;
+        sweetBeans.Remove(bean);
+        sourBeans.Add(bean);
     }
 
-    public void ConvertToParasite()
+    public void SourToSweet(BeanCorruption bean)
     {
-        parasiteAmount++;
-        symbiontAmount--;
+        sourBeans.Remove(bean);
+        sweetBeans.Add(bean);
     }
 }

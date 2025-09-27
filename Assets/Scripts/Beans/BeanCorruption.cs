@@ -9,26 +9,26 @@ public class BeanCorruption : MonoBehaviour, ICorruptible
     
     public bool IsParasite => corruption >= parasiteThreshold;
 
-    public Action OnBecomeParasite, OnBecomeSymbiont;
+    public Action<BeanCorruption> OnBecomeParasite, OnBecomeSymbiont;
 
     private void Awake()
     {
-        OnBecomeParasite += BeanManager.Instance.ConvertToParasite;
-        OnBecomeSymbiont += BeanManager.Instance.ConvertToSymbiont;
+        OnBecomeParasite += BeanManager.Instance.SourToSweet;
+        OnBecomeSymbiont += BeanManager.Instance.SweetToSour;
     }
 
     public void Start()
     {
         if (IsParasite)
-            BeanManager.Instance.AddParasite();
-        else BeanManager.Instance.AddSymbiont();
+            BeanManager.Instance.AddSourBean(this);
+        else BeanManager.Instance.AddSweetBean(this);
     }
 
     public void OnDestroy()
     {
         if (IsParasite)
-            BeanManager.Instance.RemoveParasite();
-        else BeanManager.Instance.RemoveSymbiont();
+            BeanManager.Instance.RemoveSourBean(this);
+        else BeanManager.Instance.RemoveSweetBean(this);
     }
 
     public void Corrupt(float value)
@@ -37,7 +37,7 @@ public class BeanCorruption : MonoBehaviour, ICorruptible
         corruption += value;
         corruption = Mathf.Clamp01(corruption);
         
-        if (wasParasite && !IsParasite) OnBecomeSymbiont?.Invoke();
-        else if (!wasParasite && IsParasite) OnBecomeParasite?.Invoke();
+        if (wasParasite && !IsParasite) OnBecomeSymbiont?.Invoke(this);
+        else if (!wasParasite && IsParasite) OnBecomeParasite?.Invoke(this);
     }
 }
