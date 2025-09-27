@@ -13,6 +13,7 @@ public class BeanManager : MonoBehaviour
     [SerializeField]private List<BeanMovement> patrollingBeans;
 
     public int PoliceBeans => policeBeans.Count;
+    public int CorruptPoliceBeans => policeBeans.Count(b => b.IsSour);
     public int SourBeans => sourBeans.Count;
     public int AllBeans => allBeans.Count;
     public int SweetBeans => sweetBeans.Count;
@@ -87,7 +88,7 @@ public class BeanManager : MonoBehaviour
     public void TryUnPolice(bool isCorrupted)
     {
         List<Bean> targetBeans = isCorrupted ? sweetBeans : sourBeans;
-        Bean[] badBeans = sweetBeans.Where(bean => policeBeans.Contains(bean)).ToArray();
+        Bean[] badBeans = targetBeans.Where(bean => policeBeans.Contains(bean)).ToArray();
         if(badBeans.Length <= 0) return;
         
         badBeans[Random.Range(0, badBeans.Count())].UnPolice();

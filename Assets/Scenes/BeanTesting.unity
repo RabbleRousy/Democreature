@@ -7733,6 +7733,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2836709478446173940, guid: 77725f4d629a546b8bea6a84710bb1f1, type: 3}
+      propertyPath: corruptCount
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991227044678573646, guid: 77725f4d629a546b8bea6a84710bb1f1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7698435054848322521}
     - target: {fileID: 7604930790443047988, guid: 77725f4d629a546b8bea6a84710bb1f1, type: 3}
       propertyPath: m_Name
       value: BrainCanvas
