@@ -45,6 +45,9 @@ public class Stomach : MonoBehaviour
     public bool CanBuyFactChecker =>
         GameManager.Instance.Blood >= factCheckerCost && currentFactChecker < maxFactChecker;
 
+    public int FactCheckerCost => factCheckerCost;
+    public int StationCost => stationCost;
+
 
     private void Awake()
     {
