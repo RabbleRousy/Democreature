@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BeanManager : MonoBehaviour
 {
@@ -74,5 +75,12 @@ public class BeanManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void TryUnPolice()
+    {
+        Bean[] badBeans = sourBeans.Where(bean => policeBeans.Contains(bean)).ToArray();
+
+        badBeans[Random.Range(0, badBeans.Count())].UnPolice();
     }
 }
