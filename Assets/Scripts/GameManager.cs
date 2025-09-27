@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public event Action OnTick;
+    public event Action OnLateTick;
 
     private float timer;
 
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
         {
             timer = tickInterval;
             OnTick?.Invoke();
+            OnLateTick?.Invoke();
             Blood += bloodPerBean * BeanManager.Instance.SweetBeans;
         }
     }
