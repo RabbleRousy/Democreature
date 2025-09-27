@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace DefaultNamespace
 {
@@ -8,11 +9,17 @@ namespace DefaultNamespace
         [SerializeField] private float range;
         [SerializeField] private float value;
 
+        private bool useCorruptionChance;
+
         public float Value
         {
             get => value;
             set => this.value = value;
         }
+        
+        public float CorruptionChance { get; set; }
+        public bool UseCorruptionChance { get; set; }
+
 
         private void Start()
         {
@@ -27,9 +34,24 @@ namespace DefaultNamespace
            {
                if (collider.gameObject.TryGetComponent(out ICorruptible corruptible))
                {
-                   corruptible.Corrupt(value);
+                   if (useCorruptionChance)
+                   {
+                      int direction = Random.Range(0f, 1f) < CorruptionChance ? 1 : -1;
+                      corruptible.Corrupt(value * direction);
+                   }
+                   else
+                   {
+                       corruptible.Corrupt(value);
+                   }
+                  
                }
            }
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.coral;
+            Gizmos.DrawWireSphere(transform.position,range);
         }
     }
 }
