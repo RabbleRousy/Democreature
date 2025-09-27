@@ -15,6 +15,7 @@ public class BeanMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        agent.SetDestination(target.position);
+        if (target)
+            agent.SetDestination(target.position);
     }
 }

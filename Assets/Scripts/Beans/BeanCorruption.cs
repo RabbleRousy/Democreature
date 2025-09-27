@@ -11,10 +11,23 @@ public class BeanCorruption : MonoBehaviour, ICorruptible
 
     public Action<BeanCorruption> OnBecomeParasite, OnBecomeSymbiont;
 
+    [SerializeField] private uint lifeTime;
+
     private void Awake()
     {
         OnBecomeParasite += BeanManager.Instance.SourToSweet;
         OnBecomeSymbiont += BeanManager.Instance.SweetToSour;
+
+        GameManager.Instance.OnTick += ReduceLifeTime;
+    }
+
+    private void ReduceLifeTime()
+    {
+        lifeTime--;
+        if (lifeTime == 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void Start()
