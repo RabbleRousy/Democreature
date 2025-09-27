@@ -7,17 +7,20 @@ public class BeanManager : MonoBehaviour
 {
     public static BeanManager Instance;
 
-    [SerializeField] private List<BeanCorruption> allBeans, sweetBeans, sourBeans, policeBeans;
+    [SerializeField] private List<Bean> allBeans, sweetBeans, sourBeans, policeBeans;
 
     public int PoliceBeans => policeBeans.Count;
+    public int SourBeans => sourBeans.Count;
+    public int AllBeans => allBeans.Count;
+    public int SweetBeans => sweetBeans.Count;
 
     private void Awake()
     {
         Instance = this;
-        allBeans = new List<BeanCorruption>();
-        sweetBeans = new List<BeanCorruption>();
-        sourBeans = new List<BeanCorruption>();
-        policeBeans = new List<BeanCorruption>();
+        allBeans = new List<Bean>();
+        sweetBeans = new List<Bean>();
+        sourBeans = new List<Bean>();
+        policeBeans = new List<Bean>();
     }
 
     public float GetParasitePercentage()
@@ -25,18 +28,20 @@ public class BeanManager : MonoBehaviour
         return (float)sourBeans.Count / (sweetBeans.Count + sourBeans.Count);
     }
 
-    public void AddSweetBean(BeanCorruption bean) => sweetBeans.Add(bean);
-    public void RemoveSweetBean(BeanCorruption bean) => sweetBeans.Remove(bean);
-    public void AddSourBean(BeanCorruption bean) => sourBeans.Add(bean);
-    public void RemoveSourBean(BeanCorruption bean) => sourBeans.Remove(bean);
+    public void AddSweetBean(Bean bean) => sweetBeans.Add(bean);
+    public void RemoveSweetBean(Bean bean) => sweetBeans.Remove(bean);
+    public void AddSourBean(Bean bean) => sourBeans.Add(bean);
+    public void RemoveSourBean(Bean bean) => sourBeans.Remove(bean);
+    public void AddPolice(Bean bean) => policeBeans.Add(bean);
+    public void RemovePolice(Bean bean) => policeBeans.Remove(bean);
 
-    public void SweetToSour(BeanCorruption bean)
+    public void SweetToSour(Bean bean)
     {
         sweetBeans.Remove(bean);
         sourBeans.Add(bean);
     }
 
-    public void SourToSweet(BeanCorruption bean)
+    public void SourToSweet(Bean bean)
     {
         sourBeans.Remove(bean);
         sweetBeans.Add(bean);
@@ -44,7 +49,7 @@ public class BeanManager : MonoBehaviour
 
     public bool TryCreatePoliceBean(bool shouldBeSourBean)
     {
-        BeanCorruption bean;
+        Bean bean;
         if (shouldBeSourBean)
         {
             bean = sourBeans.FirstOrDefault(bean => !policeBeans.Contains(bean));
@@ -61,8 +66,7 @@ public class BeanManager : MonoBehaviour
 
         if (bean != null)
         {
-            policeBeans.Add(bean);
-            return true;
+            return bean.BecomePolice();
         }
 
         return false;
