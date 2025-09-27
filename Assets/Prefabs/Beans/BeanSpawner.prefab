@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5048189524284099797}
   - component: {fileID: 8181887864596033665}
+  - component: {fileID: 7988148482802383558}
   m_Layer: 0
   m_Name: BeanSpawner
   m_TagString: Untagged
@@ -45,9 +46,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bec8b325a2ae048d8a694e55d348044a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  beanToSpawn: {fileID: 4901316753641557050, guid: c8e040dff397c4c34b69498fc2e1c754, type: 3}
+  beanToSpawn: {fileID: 400881910280605695, guid: c8e040dff397c4c34b69498fc2e1c754, type: 3}
   minAmountPerTick: 1
-  maxAmountPerTick: 3
+  maxAmountPerTick: 1
+  possibleTargets:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &7988148482802383558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2332049214843072872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bc4df3f0bdbe4a46a860e64ba8cb061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AreaManager
 --- !u!1 &7007755839578103767
 GameObject:
   m_ObjectHideFlags: 0

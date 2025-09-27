@@ -19,7 +19,10 @@ public class Stomach : MonoBehaviour
     [SerializeField] private int maxFood;
     [SerializeField] private int minFoodSpawnInterval;
     [SerializeField] private int maxFoodSpawnInterval;
-    [SerializeField] private GameObject[] foodPrefabs;
+    [SerializeField] private float minInfluence = -0.5f;
+    [SerializeField] private float maxInfluence = 0.5f;
+    [SerializeField] private GameObject[] foodPrefabsPositive;
+    [SerializeField] private GameObject[] foodPrefabsNegative;
     [SerializeField] private Transform[] foodSpawns;
 
     [SerializeField] private int factCheckerCost;
@@ -100,7 +103,7 @@ public class Stomach : MonoBehaviour
     {
         int foodAmount = Random.Range(minFood, maxFood + 1);
         availableFoodSpawns = new List<Transform>(foodSpawns);
-        float totalCorruption = 0;
+        float totalInfluence = 0;
         for (int i = 0; i < foodAmount; i++)
         {
 
@@ -110,22 +113,26 @@ public class Stomach : MonoBehaviour
             }
             
             int index = Random.Range(0, availableFoodSpawns.Count);
-            Instantiate(foodPrefabs[Random.Range(0,foodPrefabs.Length)], availableFoodSpawns[index].position, Quaternion.identity);
+            
+            float currentInfluence = Random.Range(minInfluence, maxInfluence);
+            GameObject[] prefabs = currentInfluence < 0 ? foodPrefabsPositive : foodPrefabsNegative;
+            
+            Instantiate(prefabs[Random.Range(0,prefabs.Length)], availableFoodSpawns[index].position, Quaternion.identity);
             availableFoodSpawns.RemoveAt(index);
 
-            totalCorruption += Random.Range(0.1f, 0.25f);
+            totalInfluence += currentInfluence;
             
             yield return new WaitForSeconds(0.5f);
         }
 
-        totalCorruption /= foodAmount;
+        totalInfluence /= foodAmount;
 
-        if (totalCorruption > 0)
+        if (totalInfluence > 0)
         {
-            totalCorruption *= 1 - (currentFactChecker / (float)maxFactChecker);
+            totalInfluence *= 1 - (currentFactChecker / (float)maxFactChecker);
         }
         
-        UpdateStations(totalCorruption);
+        UpdateStations(totalInfluence);
     }
 
     private void UpdateStations(float value)
