@@ -1035,8 +1035,10 @@ MonoBehaviour:
   maxFood: 5
   minFoodSpawnInterval: 2
   maxFoodSpawnInterval: 5
-  foodPrefabs:
-  - {fileID: 4024620755335734780, guid: ce268f192ea77a6419c6fb1416e73520, type: 3}
+  minInfluence: -0.5
+  maxInfluence: 0.5
+  foodPrefabsPositive: []
+  foodPrefabsNegative: []
   foodSpawns:
   - {fileID: 6439152311111903238}
   - {fileID: 2660389330310095683}

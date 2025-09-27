@@ -18,7 +18,7 @@ namespace DefaultNamespace.Organs
             int amount = Mathf.FloorToInt(Random.Range(minAmount, maxAmount) * 1 - GameManager.Instance.BrainCorruption);
             for (int i = 0; i < amount; i++)
             {
-                BeanManager.Instance.TryUnPolice();
+                BeanManager.Instance.TryUnPolice(Random.Range(0f,1f) < GameManager.Instance.BrainCorruption);
             }
         }
     }
