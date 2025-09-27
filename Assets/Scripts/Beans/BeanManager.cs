@@ -10,6 +10,7 @@ public class BeanManager : MonoBehaviour
     public static BeanManager Instance;
 
     [SerializeField] private List<Bean> allBeans, sweetBeans, sourBeans, policeBeans;
+    [SerializeField]private List<BeanMovement> patrollingBeans;
 
     public int PoliceBeans => policeBeans.Count;
     public int SourBeans => sourBeans.Count;
@@ -38,6 +39,9 @@ public class BeanManager : MonoBehaviour
     public void RemoveSourBean(Bean bean) => sourBeans.Remove(bean);
     public void AddPolice(Bean bean) => policeBeans.Add(bean);
     public void RemovePolice(Bean bean) => policeBeans.Remove(bean);
+    
+    public void AddPatrollingBean(BeanMovement bean) => patrollingBeans.Add(bean);
+    public void RemovePatrollingBean(BeanMovement bean) => patrollingBeans.Remove(bean);
 
     public void SweetToSour(Bean bean)
     {
@@ -86,7 +90,7 @@ public class BeanManager : MonoBehaviour
         badBeans[Random.Range(0, badBeans.Count())].UnPolice();
     }
 
-    public void IncreasePatrol(PatrolTarget target)
+    public bool TryIncreasePatrol(PatrolTarget target)
     {
         // Find non-patrolling bean and send it to patrol
         foreach (var b in policeBeans)
@@ -95,8 +99,10 @@ public class BeanManager : MonoBehaviour
             if (movement.Patrolling) continue;
             
             movement.StartPatrolling(target);
-            return;
+            return true;
         }
+
+        return false;
     }
 
     public void DecreasePatrol()

@@ -2,6 +2,7 @@ using System;
 using DefaultNamespace;
 using UnityEditor.Animations;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 public class Bean : MonoBehaviour, ICorruptible
