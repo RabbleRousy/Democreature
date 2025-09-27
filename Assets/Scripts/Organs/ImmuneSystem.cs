@@ -27,7 +27,7 @@ namespace DefaultNamespace.Organs
 
         public void Buy()
         {
-            if(GameManager.Instance.Blood <= bloodCostPolice && BeanManager.Instance.PoliceBeans < policePerUpgrade * currentUpgrades) return;
+            if(GameManager.Instance.Blood < bloodCostPolice && BeanManager.Instance.PoliceBeans < policePerUpgrade * currentUpgrades) return;
             
             bool ShouldBeCorrupted = Random.Range(0f, 1f) <= currentCorruptionChance;
             if (BeanManager.Instance.TryCreatePoliceBean(ShouldBeCorrupted))
