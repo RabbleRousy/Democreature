@@ -1226,7 +1226,7 @@ GameObject:
   - component: {fileID: 4173412842464675425}
   - component: {fileID: 2531398039897480433}
   m_Layer: 0
-  m_Name: WorldCanvas
+  m_Name: ImmuneSystemUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1298,7 +1298,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4173412842464675425
 MonoBehaviour:
   m_ObjectHideFlags: 0
