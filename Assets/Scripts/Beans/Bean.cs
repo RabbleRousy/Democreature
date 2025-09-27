@@ -75,7 +75,6 @@ public class Bean : MonoBehaviour, ICorruptible
     {
         bool wasSour = IsSour;
         corruption += value;
-        Debug.Log(value);
         corruption = Mathf.Clamp01(corruption);
         UpdateVisuals();
         

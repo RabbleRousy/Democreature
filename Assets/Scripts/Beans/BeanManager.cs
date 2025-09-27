@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -82,5 +83,31 @@ public class BeanManager : MonoBehaviour
         Bean[] badBeans = sourBeans.Where(bean => policeBeans.Contains(bean)).ToArray();
 
         badBeans[Random.Range(0, badBeans.Count())].UnPolice();
+    }
+
+    public void IncreasePatrol(PatrolTarget target)
+    {
+        // Find non-patrolling bean and send it to patrol
+        foreach (var b in policeBeans)
+        {
+            var movement = b.GetComponent<BeanMovement>();
+            if (movement.Patrolling) continue;
+            
+            movement.StartPatrolling(target);
+            return;
+        }
+    }
+
+    public void DecreasePatrol()
+    {
+        // Find patrolling bean and stop it
+        foreach (var b in policeBeans)
+        {
+            var movement = b.GetComponent<BeanMovement>();
+            if (!movement.Patrolling) continue;
+            
+            movement.StopPatrolling();
+            return;
+        }
     }
 }
