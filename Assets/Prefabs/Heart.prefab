@@ -953,7 +953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Heart
   ticksTillElection: 4
-  maxVirusBias: 0.2
+  maxVirusBias: 0
   maxPatrollingBeansForProtection: 5
   clearMindCurve:
     serializedVersion: 2
@@ -989,7 +989,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   clearMindInfluence: 0.2
-  clearMindCost: 100
+  clearMindCost: 10
   audioBeat: {fileID: 2973622296934353895}
   audioElection: {fileID: 5050254572205160428}
 --- !u!114 &4148752884338043742

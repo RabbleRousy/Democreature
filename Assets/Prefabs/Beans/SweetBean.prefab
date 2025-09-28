@@ -518,9 +518,9 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   sourThreshold: 0.7
   spreaderRange: 2
-  policeForce: 0.2
-  minCorruption: 0
-  maxCorruption: 0.75
+  policeForce: 0.02
+  minCorruption: 0.4
+  maxCorruption: 0.8
   possibleAnimators:
   - {fileID: 9100000, guid: df60664102c714feea8bf704d0ee0471, type: 2}
   - {fileID: 9100000, guid: de55e9d4961424eb1b32b23c807ad59e, type: 2}

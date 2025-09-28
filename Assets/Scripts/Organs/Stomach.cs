@@ -64,6 +64,8 @@ public class Stomach : MonoBehaviour
     private void Start()
     {
         GameManager.Instance.OnTick += Tick;
+        CreatStation(ref availablePointsStomach,true);
+        CreatStation(ref availablePointsStomach,true);
     }
 
     private void Tick()
@@ -100,16 +102,16 @@ public class Stomach : MonoBehaviour
         CreatStation(ref availablePointsBrain);
     }
 
-    private void CreatStation(ref List<Transform> points)
+    private void CreatStation(ref List<Transform> points, bool ignorecost = false)
     {
-        if (points.Count <= 0 || GameManager.Instance.Blood < stationCost) return;
+        if (points.Count <= 0 || (GameManager.Instance.Blood < stationCost && !ignorecost)) return;
         int index = Random.Range(0, points.Count);
         Vector3 position = points[index].position;
         points.RemoveAt(index);
 
         Spreader spreader = Instantiate(stationPrefab, position, Quaternion.identity);
         stations.Add(spreader);
-        GameManager.Instance.Blood -= stationCost;
+        if(!ignorecost) GameManager.Instance.Blood -= stationCost;
     }
 
     private IEnumerator SpawnFood()

@@ -50,7 +50,7 @@ public class Bean : MonoBehaviour, ICorruptible
 
     private void Start()
     {
-        Corrupt(Random.Range(minCorruption,maxCorruption));
+        if(BeanManager.Instance.AllBeans > 3) Corrupt(Random.Range(minCorruption,maxCorruption));
         UpdateVisuals();
         lifeTime += Random.Range(-lifeTimeVariance, lifeTimeVariance+1);
     }

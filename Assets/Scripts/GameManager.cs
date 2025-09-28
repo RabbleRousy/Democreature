@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
             OnTick?.Invoke();
             OnLateTick?.Invoke();
             Blood += bloodPerBean * BeanManager.Instance.SweetBeans;
-            if (BeanCorruption > looseThreshold)
+            if (HeartCorruption > looseThreshold)
             {
                 looseCountdown--;
                 if(looseCountdown <= 0) Lost();
