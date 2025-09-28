@@ -79,7 +79,8 @@ public class Heart : MonoBehaviour
     {
         if (CanClearMind())
         {
-            GameManager.Instance.BrainCorruption = clearMindCurve.Evaluate(GameManager.Instance.BrainCorruption) * clearMindInfluence;
+            GameManager.Instance.BrainCorruption -= clearMindCurve.Evaluate(GameManager.Instance.HeartCorruption) * clearMindInfluence;
+            GameManager.Instance.BrainCorruption = Mathf.Clamp01(GameManager.Instance.BrainCorruption);
         }
     }
 

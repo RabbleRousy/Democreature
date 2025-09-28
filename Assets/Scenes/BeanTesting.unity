@@ -3937,6 +3937,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1275646425658653957, guid: 2b7d51995bec2455f877ea21bc3cc3cd, type: 3}
+      propertyPath: m_text
+      value: 'Recruit Guard '
+      objectReference: {fileID: 0}
     - target: {fileID: 1294822871242955729, guid: 2b7d51995bec2455f877ea21bc3cc3cd, type: 3}
       propertyPath: m_Camera
       value: 
