@@ -47,6 +47,9 @@ public class Stomach : MonoBehaviour
 
     public int FactCheckerCost => factCheckerCost;
     public int StationCost => stationCost;
+    
+    public int MaxFactCheckers => maxFactChecker;
+    public int FactCheckerCount => currentFactChecker;
 
 
     private void Awake()
