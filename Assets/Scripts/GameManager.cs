@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
+    public event Action OnEarlyTick;
     public event Action OnTick;
     public event Action OnLateTick;
 
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
         if (timer <= 0)
         {
             timer = tickInterval;
+            OnEarlyTick?.Invoke();
             OnTick?.Invoke();
             OnLateTick?.Invoke();
             Blood += bloodPerBean * BeanManager.Instance.SweetBeans;
