@@ -23,6 +23,7 @@ public class EventUI : MonoBehaviour
         title.text = eventName;
         description.text = eventDescription;
         img.sprite = icon;
+        animator.ResetTrigger("Close");
         animator.SetTrigger("Open");
         source.Play();
 
@@ -41,6 +42,7 @@ public class EventUI : MonoBehaviour
     public void Hide()
     {
         if (waitingForClose) return;
+        animator.ResetTrigger("Open");
         animator.SetTrigger("Close");
     }
 }
