@@ -224,6 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 126155895742169255}
   - component: {fileID: 6895418024911653863}
+  - component: {fileID: 1028755579121205505}
   m_Layer: 0
   m_Name: EventInfo
   m_TagString: Untagged
@@ -273,6 +274,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1028755579121205505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4287851250405026635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f046ad4d025614d98a4955394187127c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  title: {fileID: 3790469075213545451}
+  description: {fileID: 6535761868387193058}
+  img: {fileID: 1487654297289238239}
 --- !u!1 &6702414246055126481
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,8 +431,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Lorem ipsum
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 77b66a2bfa1c8451a9e544f95e90a123, type: 2}
-  m_sharedMaterial: {fileID: -3806571054594358934, guid: 77b66a2bfa1c8451a9e544f95e90a123, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e87428af0ab44506bca56d03103bb28, type: 2}
+  m_sharedMaterial: {fileID: 6615718658486285835, guid: 5e87428af0ab44506bca56d03103bb28, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
