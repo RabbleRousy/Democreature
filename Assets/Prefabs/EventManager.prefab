@@ -49,7 +49,7 @@ MonoBehaviour:
   strongVirusAttack: 0.4
   durationActiveVirusAttack: 10
   virusDescription: 'Your heart got infected by a virus! [...]'
-  virusIcon: {fileID: -5721300102204979562, guid: 622235623b61a4e7d96f0f87845bbe29, type: 3}
+  virusIcon: {fileID: -2646067976510346988, guid: cf7273d4b1b3479448f9ecec0301310e, type: 3}
   brainFreezeDuration: 5
   brainFreezeDescription: 'Oh no, you got the brain freeze! [...]'
   brainFreezeIcon: {fileID: 8266685410750478047, guid: 7987e55fabbb44698a5de81bc232c3b0, type: 3}

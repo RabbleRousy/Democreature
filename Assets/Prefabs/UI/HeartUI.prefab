@@ -283,7 +283,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Brain Corruption: 100%'
+  m_text: 'Brain Fog: 100%'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77b66a2bfa1c8451a9e544f95e90a123, type: 2}
   m_sharedMaterial: {fileID: -3806571054594358934, guid: 77b66a2bfa1c8451a9e544f95e90a123, type: 2}
