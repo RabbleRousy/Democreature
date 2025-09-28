@@ -8,13 +8,16 @@ public class FoodVisual : MonoBehaviour
     [SerializeField] private string animName;
     [SerializeField] private float timeTillDissolve = 0.5f;
     [SerializeField] private GameObject bacteria;
+    [SerializeField] private AudioClip[] clips;
 
     private Animator animator;
     private int bacteriaAmount = 4;
+    private AudioSource source;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
         StartCoroutine(PlayAnimation());
     }
 
@@ -34,6 +37,8 @@ public class FoodVisual : MonoBehaviour
         yield return new WaitForSeconds(timeTillDissolve);
         
         animator.SetTrigger(animName);
+        source.clip = clips[Random.Range(0, clips.Length)];
+        source.Play();
         yield return new WaitForSeconds(1.2f);
         Destroy(gameObject);
     }

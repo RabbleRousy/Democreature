@@ -19,6 +19,8 @@ public class Bean : MonoBehaviour, ICorruptible
     [SerializeField] private float maxCorruption = 0.75f;
     [SerializeField] private AnimatorController[] possibleAnimators;
 
+    [SerializeField] private AudioSource deathSound;
+
     public Action<Bean> OnBecomeSour, OnBecomeSweet, OnBecomePolice, OnUnPolice;
     
     private SpriteRenderer renderer;
@@ -62,6 +64,7 @@ public class Bean : MonoBehaviour, ICorruptible
         {
             RemoveFromLists();
             animator.SetTrigger("Death");
+            deathSound.Play();
         }
     }
 

@@ -15,12 +15,16 @@ public class Heart : MonoBehaviour
 
     private Spreader spreader;
     private int electionCounter;
+    private Animator animator;
+    private AudioSource audio;
 
     public int ClearMindCost => clearMindCost;
 
     private void Awake()
     {
         spreader = GetComponent<Spreader>();
+        animator = GetComponent<Animator>();
+        audio = GetComponent<AudioSource>();
         electionCounter = ticksTillElection;
     }
 
@@ -33,7 +37,8 @@ public class Heart : MonoBehaviour
     private void Tick()
     {
         electionCounter--;
-
+        animator.SetTrigger("Beat");
+        audio.Play();
         if (electionCounter <= 0)
         {
             electionCounter = ticksTillElection;
