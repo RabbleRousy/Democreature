@@ -55,7 +55,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: SourVisuals/SourEyes
+    path: SourVisuals/Spikes
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -76,7 +76,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: SourVisuals/Spikes
+    path: SourVisuals/SourEyes
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -117,7 +117,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2949850281
+      path: 310761940
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 212
@@ -126,7 +126,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 310761940
+      path: 2949850281
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 212
@@ -209,7 +209,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: SourVisuals/SourEyes
+    path: SourVisuals/Spikes
     classID: 212
     script: {fileID: 0}
     flags: 0
@@ -230,7 +230,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: SourVisuals/Spikes
+    path: SourVisuals/SourEyes
     classID: 212
     script: {fileID: 0}
     flags: 0
