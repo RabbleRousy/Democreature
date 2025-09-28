@@ -8231,6 +8231,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8928555643587361460, guid: 0f1551fd5bcf04da9880d82910d2cd16, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7860191155158662890}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8385,6 +8389,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc4df3f0bdbe4a46a860e64ba8cb061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AreaManager
+--- !u!114 &7860191155158662890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2453617813766473156, guid: b4643085768ef471b8b5492c7c8deaed, type: 3}
+  m_PrefabInstance: {fileID: 7860191155158662885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f79b87c05ba004785ffb7e9336523c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Heart
 --- !u!1001 &8406280865183761389
 PrefabInstance:
   m_ObjectHideFlags: 0
