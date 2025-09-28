@@ -48,15 +48,17 @@ MonoBehaviour:
   mediumVirusAttack: 0.3
   strongVirusAttack: 0.4
   durationActiveVirusAttack: 10
-  virusDescription: 'Your heart got infected by a virus! [...]'
+  virusDescription: Your heart got infected by a virus! Send some guards to protect
+    it!
   virusIcon: {fileID: -2646067976510346988, guid: cf7273d4b1b3479448f9ecec0301310e, type: 3}
   brainFreezeDuration: 5
-  brainFreezeDescription: 'Oh no, you got the brain freeze! [...]'
+  brainFreezeDescription: Oh no, you got the brain freeze! Wait until it goes away.
   brainFreezeIcon: {fileID: 8266685410750478047, guid: 7987e55fabbb44698a5de81bc232c3b0, type: 3}
   weakBrainCorruption: 0.2
   mediumBrainCorruption: 0.4
   strongBrainCorruption: 0.5
-  brainFogDescription: 'Your brain is getting all foggy [...]'
+  brainFogDescription: Your brain is getting all foggy. Send some blood to the brain
+    to glear your mind!
   brainFogIcon: {fileID: 8266685410750478047, guid: 7987e55fabbb44698a5de81bc232c3b0, type: 3}
   brainFogInfoDuration: 3
   heart: {fileID: 0}
