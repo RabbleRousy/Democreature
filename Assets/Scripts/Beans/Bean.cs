@@ -1,8 +1,6 @@
 using System;
 using DefaultNamespace;
-using UnityEditor.Animations;
 using UnityEngine;
-using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 public class Bean : MonoBehaviour, ICorruptible
@@ -17,7 +15,7 @@ public class Bean : MonoBehaviour, ICorruptible
     [SerializeField] private float policeForce = 0.2f;
     [SerializeField] private float minCorruption = 0f;
     [SerializeField] private float maxCorruption = 0.75f;
-    [SerializeField] private AnimatorController[] possibleAnimators;
+    [SerializeField] private RuntimeAnimatorController[] possibleAnimators;
 
     [SerializeField] private AudioSource deathSound;
 
@@ -52,7 +50,7 @@ public class Bean : MonoBehaviour, ICorruptible
 
     private void Start()
     {
-        Corrupt(Random.Range(minCorruption,maxCorruption));
+        if(BeanManager.Instance.AllBeans > 3) Corrupt(Random.Range(minCorruption,maxCorruption));
         UpdateVisuals();
         lifeTime += Random.Range(-lifeTimeVariance, lifeTimeVariance+1);
     }

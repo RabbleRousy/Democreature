@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de742e82404466bb06c56536637ee61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.Spreader
-  range: 3
+  range: 5
   value: 0
   vfxPrefab: {fileID: 4837445403221927775, guid: 4db83f5ae94bca545ae9354118b62f61, type: 3}
   gradient:
@@ -170,6 +170,7 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
+  alpha: 0.5
 --- !u!1 &2956951741725914140
 GameObject:
   m_ObjectHideFlags: 0
