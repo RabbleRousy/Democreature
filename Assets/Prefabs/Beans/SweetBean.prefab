@@ -483,6 +483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   corruption: 0
   lifeTime: 10
+  lifeTimeVariance: 2
   policeVisuals: {fileID: 2831893248786237889}
   sourVisuals: {fileID: 5479828127675506153}
   colorGradient:

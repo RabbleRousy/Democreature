@@ -8,7 +8,8 @@ using Random = UnityEngine.Random;
 public class Bean : MonoBehaviour, ICorruptible
 {
     [SerializeField] private float corruption;
-    [SerializeField] private uint lifeTime;
+    [SerializeField] private int lifeTime;
+    [SerializeField] private int lifeTimeVariance;
     [SerializeField] private GameObject policeVisuals, sourVisuals;
     [SerializeField] private Gradient colorGradient;
     [SerializeField] private float sourThreshold = 0.9f;
@@ -53,6 +54,7 @@ public class Bean : MonoBehaviour, ICorruptible
     {
         Corrupt(Random.Range(minCorruption,maxCorruption));
         UpdateVisuals();
+        lifeTime += Random.Range(-lifeTimeVariance, lifeTimeVariance+1);
     }
 
     private void ReduceLifeTime()
