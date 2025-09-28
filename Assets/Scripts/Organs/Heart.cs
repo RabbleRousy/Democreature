@@ -12,11 +12,14 @@ public class Heart : MonoBehaviour
     [SerializeField] private AnimationCurve clearMindCurve;
     [SerializeField] private float clearMindInfluence;
     [SerializeField] private int clearMindCost;
+    
+    [SerializeField]private AudioSource audioBeat;
+    [SerializeField]private AudioSource audioElection;
 
     private Spreader spreader;
     private int electionCounter;
     private Animator animator;
-    private AudioSource audio;
+    
 
     public int ClearMindCost => clearMindCost;
 
@@ -24,7 +27,6 @@ public class Heart : MonoBehaviour
     {
         spreader = GetComponent<Spreader>();
         animator = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
         electionCounter = ticksTillElection;
     }
 
@@ -38,7 +40,7 @@ public class Heart : MonoBehaviour
     {
         electionCounter--;
         animator.SetTrigger("Beat");
-        audio.Play();
+        audioBeat.Play();
         if (electionCounter <= 0)
         {
             electionCounter = ticksTillElection;
@@ -65,6 +67,7 @@ public class Heart : MonoBehaviour
         spreader.CorruptionChance = GameManager.Instance.HeartCorruption;
         Debug.Log("Protection: " + protection);
         DotColorizer.Instance.UpdateDots();
+        audioElection.Play();
     }
 
     public void ClearMind()
