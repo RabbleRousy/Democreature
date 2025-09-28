@@ -7,7 +7,7 @@ public class Heart : MonoBehaviour
 {
     [SerializeField] private int ticksTillElection;
     [SerializeField] private float maxVirusBias = 0.2f;
-    [SerializeField] private int maxPatrollingBeansForProtection;
+    [SerializeField] private int maxPatrollingBeansForProtection = 5;
 
     [SerializeField] private AnimationCurve clearMindCurve;
     [SerializeField] private float clearMindInfluence;
@@ -41,6 +41,17 @@ public class Heart : MonoBehaviour
         }
 
     }
+
+    public void StartVirusAttack(float influence)
+    {
+        maxVirusBias = influence;
+    }
+    
+    public void EndVirusAttack()
+    {
+        maxVirusBias = 0;
+    }
+
 
     private void UpdateCorruption()
     {

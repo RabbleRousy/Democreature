@@ -11,6 +11,7 @@ namespace DefaultNamespace.Organs
         [SerializeField] private int maxAmount;
 
         public int UnPoliceCost => bloodCost;
+        public bool Freeze { get; set; }
 
         public void UnPolice()
         {
@@ -26,7 +27,7 @@ namespace DefaultNamespace.Organs
 
         public bool CanUnPolice()
         {
-            return GameManager.Instance.Blood >= bloodCost && BeanManager.Instance.PoliceBeans > 0;
+            return GameManager.Instance.Blood >= bloodCost && BeanManager.Instance.PoliceBeans > 0 && !Freeze;
         }
     }
 }
