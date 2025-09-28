@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public float HeartCorruption  { get; set; }
     public float BeanCorruption  { get; set; }
 
-    private int blood;
+    private int blood = 10;
     private int looseCountdown;
     public int Blood
     {
@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
             OnEarlyTick?.Invoke();
             OnTick?.Invoke();
             OnLateTick?.Invoke();
-            Blood += bloodPerBean * BeanManager.Instance.SweetBeans;
+            Blood += bloodPerBean * BeanManager.Instance.AllBeans;
             if (HeartCorruption > looseThreshold)
             {
                 looseCountdown--;
