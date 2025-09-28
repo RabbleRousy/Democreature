@@ -2,18 +2,23 @@ using System;
 using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private float tickInterval;
     [SerializeField] private int bloodPerBean = 1;
     [SerializeField] private TMP_Text bloodCount;
+    
+    [SerializeField]private float looseThreshold = 0.8f;
+    [SerializeField] private int ticksTillLost = 10;
 
     public float BrainCorruption { get; set; }
     public float HeartCorruption  { get; set; }
     public float BeanCorruption  { get; set; }
 
     private int blood;
+    private int looseCountdown;
     public int Blood
     {
         get => blood;
@@ -37,6 +42,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         timer = tickInterval;
+        looseCountdown = ticksTillLost;
         if (Instance != null)
         {
             Destroy(this);
@@ -49,6 +55,9 @@ public class GameManager : MonoBehaviour
     
     private void Update()
     {
+        
+        if(looseCountdown <= 0) return;
+        
         timer -= Time.deltaTime;
 
         if (timer <= 0)
@@ -58,6 +67,21 @@ public class GameManager : MonoBehaviour
             OnTick?.Invoke();
             OnLateTick?.Invoke();
             Blood += bloodPerBean * BeanManager.Instance.SweetBeans;
+            if (BeanCorruption > looseThreshold)
+            {
+                looseCountdown--;
+                if(looseCountdown <= 0) Lost();
+                Debug.Log("Lost in " + looseCountdown);
+            }
+            else
+            {
+                looseCountdown = ticksTillLost;
+            }
         }
+    }
+
+    private void Lost()
+    {
+        SceneManager.LoadScene("Lost");
     }
 }
