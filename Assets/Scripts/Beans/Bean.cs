@@ -58,8 +58,9 @@ public class Bean : MonoBehaviour, ICorruptible
     private void ReduceLifeTime()
     {
         lifeTime--;
-        if (lifeTime == 0)
+        if (lifeTime <= 0)
         {
+            Debug.Log("Die",gameObject);
             RemoveFromLists();
             animator.SetTrigger("Death");
             deathSound.Play();
