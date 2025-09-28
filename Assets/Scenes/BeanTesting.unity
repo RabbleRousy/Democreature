@@ -6977,6 +6977,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: StomachCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1593922453853345010, guid: dbb8af2aa061741b79b9452ccccc9cf0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3472536750349648759}
+    - target: {fileID: 3883102149407886404, guid: dbb8af2aa061741b79b9452ccccc9cf0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3472536750349648759}
+    - target: {fileID: 5403478766663730501, guid: dbb8af2aa061741b79b9452ccccc9cf0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3472536750349648759}
     - target: {fileID: 5433271791345581359, guid: dbb8af2aa061741b79b9452ccccc9cf0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7061,6 +7073,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 11955003}
+    - target: {fileID: 7495758426364249624, guid: dbb8af2aa061741b79b9452ccccc9cf0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3472536750349648759}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
