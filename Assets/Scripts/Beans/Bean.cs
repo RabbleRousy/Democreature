@@ -61,8 +61,8 @@ public class Bean : MonoBehaviour, ICorruptible
         if (lifeTime <= 0)
         {
             RemoveFromLists();
-            animator.SetTrigger("Death");
-            deathSound.Play();
+            if(animator != null) animator.SetTrigger("Death");
+            if(deathSound != null) deathSound.Play();
         }
     }
 
