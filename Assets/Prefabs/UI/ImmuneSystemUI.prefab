@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Total Police:'
+  m_text: 'Total Guards:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77b66a2bfa1c8451a9e544f95e90a123, type: 2}
   m_sharedMaterial: {fileID: -3806571054594358934, guid: 77b66a2bfa1c8451a9e544f95e90a123, type: 2}
@@ -1647,7 +1647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -10.504486, y: -4.5993958}
+  m_AnchoredPosition: {x: -10.504517, y: -4.599365}
   m_SizeDelta: {x: 38.9126, y: 24.755}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1294822871242955729
@@ -1695,7 +1695,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4173412842464675425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2146,7 +2146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2478683834156216463, guid: b7982f72f8b34481988a9741f6ec04df, type: 3}
       propertyPath: m_text
-      value: 'Recruit Police '
+      value: 'Recruit Guard '
       objectReference: {fileID: 0}
     - target: {fileID: 2478683834156216463, guid: b7982f72f8b34481988a9741f6ec04df, type: 3}
       propertyPath: m_fontSize
@@ -2323,11 +2323,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2478683834156216463, guid: b7982f72f8b34481988a9741f6ec04df, type: 3}
       propertyPath: m_text
-      value: 'Upgrade '
+      value: Upgrade Capacity
       objectReference: {fileID: 0}
     - target: {fileID: 2478683834156216463, guid: b7982f72f8b34481988a9741f6ec04df, type: 3}
       propertyPath: m_fontSize
-      value: 1.5
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2478683834156216463, guid: b7982f72f8b34481988a9741f6ec04df, type: 3}
       propertyPath: m_fontColor.b
@@ -2343,7 +2343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2478683834156216463, guid: b7982f72f8b34481988a9741f6ec04df, type: 3}
       propertyPath: m_fontSizeBase
-      value: 1.5
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2478683834156216463, guid: b7982f72f8b34481988a9741f6ec04df, type: 3}
       propertyPath: m_fontColor32.rgba
