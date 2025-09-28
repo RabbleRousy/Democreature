@@ -14,6 +14,8 @@ public class Bean : MonoBehaviour, ICorruptible
     [SerializeField] private float sourThreshold = 0.9f;
     [SerializeField] private float spreaderRange = 2f;
     [SerializeField] private float policeForce = 0.2f;
+    [SerializeField] private float minCorruption = 0f;
+    [SerializeField] private float maxCorruption = 0.75f;
     [SerializeField] private AnimatorController[] possibleAnimators;
 
     public Action<Bean> OnBecomeSour, OnBecomeSweet, OnBecomePolice, OnUnPolice;
@@ -45,6 +47,7 @@ public class Bean : MonoBehaviour, ICorruptible
 
     private void Start()
     {
+        Corrupt(Random.Range(minCorruption,maxCorruption));
         UpdateVisuals();
     }
 
