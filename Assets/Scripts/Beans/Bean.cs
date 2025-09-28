@@ -58,11 +58,13 @@ public class Bean : MonoBehaviour, ICorruptible
     private void ReduceLifeTime()
     {
         lifeTime--;
-        if (lifeTime <= 0)
+        if (lifeTime == 0 && gameObject != null)
         {
             RemoveFromLists();
             if(animator != null) animator.SetTrigger("Death");
             if(deathSound != null) deathSound.Play();
+            var movement = GetComponent<BeanMovement>();
+            if (movement != null && movement.Patrolling) movement.StopPatrolling(); 
         }
     }
 
@@ -153,7 +155,9 @@ public class Bean : MonoBehaviour, ICorruptible
             return;
         }
         IsPolice = false;
-        OnUnPolice(this);
+        var movement = GetComponent<BeanMovement>();
+        movement.StopPatrolling();
+        OnUnPolice?.Invoke(this);
         policeVisuals.SetActive(false);
         spreader.enabled = false;
         

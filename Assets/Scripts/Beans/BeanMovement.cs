@@ -92,4 +92,12 @@ public class BeanMovement : MonoBehaviour
         agent.stoppingDistance = defaultStoppingDistance;
         agent.avoidancePriority = 90;
     }
+
+    private void OnDestroy()
+    {
+        if (Patrolling)
+        {
+            
+        }
+    }
 }
