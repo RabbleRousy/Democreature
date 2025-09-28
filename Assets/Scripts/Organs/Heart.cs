@@ -1,5 +1,6 @@
 using System;
 using DefaultNamespace;
+using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -15,6 +16,7 @@ public class Heart : MonoBehaviour
     
     [SerializeField]private AudioSource audioBeat;
     [SerializeField]private AudioSource audioElection;
+    [SerializeField] private TMP_Text electionText;
 
     private Spreader spreader;
     private int electionCounter;
@@ -28,6 +30,7 @@ public class Heart : MonoBehaviour
         spreader = GetComponent<Spreader>();
         animator = GetComponent<Animator>();
         electionCounter = ticksTillElection;
+        electionText.text = electionCounter.ToString();
     }
 
     private void Start()
@@ -41,9 +44,11 @@ public class Heart : MonoBehaviour
         electionCounter--;
         animator.SetTrigger("Beat");
         audioBeat.Play();
+        electionText.text = electionCounter.ToString();
         if (electionCounter <= 0)
         {
             electionCounter = ticksTillElection;
+            electionText.text = electionCounter.ToString();
             UpdateCorruption();
         }
 
