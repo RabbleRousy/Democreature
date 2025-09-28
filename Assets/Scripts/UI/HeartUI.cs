@@ -20,6 +20,6 @@ public class HeartUI : MonoBehaviour
     {
         clearMindButton.interactable = heart.CanClearMind();
         clearMindCost.text = heart.ClearMindCost.ToString();
-        brainCorruption.text = "Brain Corruption: " + (int)(GameManager.Instance.BrainCorruption * 100) + "%";
+        brainCorruption.text = "Brain Fog: " + (int)(GameManager.Instance.BrainCorruption * 100) + "%";
     }
 }
