@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   corruption: 0
-  lifeTime: 100
+  lifeTime: 10
   policeVisuals: {fileID: 2831893248786237889}
   sourVisuals: {fileID: 5479828127675506153}
   colorGradient:
@@ -518,6 +518,8 @@ MonoBehaviour:
   sourThreshold: 0.7
   spreaderRange: 2
   policeForce: 0.2
+  minCorruption: 0
+  maxCorruption: 0.75
   possibleAnimators:
   - {fileID: 9100000, guid: df60664102c714feea8bf704d0ee0471, type: 2}
   - {fileID: 9100000, guid: de55e9d4961424eb1b32b23c807ad59e, type: 2}
@@ -567,7 +569,7 @@ Animator:
   m_GameObject: {fileID: 6137973648930127473}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: de55e9d4961424eb1b32b23c807ad59e, type: 2}
+  m_Controller: {fileID: 9100000, guid: df60664102c714feea8bf704d0ee0471, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
