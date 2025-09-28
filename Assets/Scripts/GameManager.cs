@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]private float looseThreshold = 0.8f;
     [SerializeField] private int ticksTillLost = 10;
 
+    [SerializeField] private GameObject countdownUI;
+    [SerializeField] private TMP_Text countdownText;
+
     public float BrainCorruption { get; set; }
     public float HeartCorruption  { get; set; }
     public float BeanCorruption  { get; set; }
@@ -71,10 +74,12 @@ public class GameManager : MonoBehaviour
             {
                 looseCountdown--;
                 if(looseCountdown <= 0) Lost();
-                Debug.Log("Lost in " + looseCountdown);
+                countdownUI.SetActive(true);
+                countdownText.text = looseCountdown.ToString();
             }
             else
             {
+                countdownUI.SetActive(false);
                 looseCountdown = ticksTillLost;
             }
         }
