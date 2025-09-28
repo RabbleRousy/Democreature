@@ -4,10 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    [SerializeField] private GameObject audio;
+    [SerializeField] private GameObject audioPrefab;
 
     private void Start()
     {
+        if (GameObject.Find("Audio(Clone)") != null) return;
+        
+        var audio = Instantiate(audioPrefab);
         DontDestroyOnLoad(audio);
     }
 
